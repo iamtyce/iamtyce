@@ -1,0 +1,26 @@
+//
+// Base Sass setup
+// --------------------------------------------------
+
+// Modules and Variables
+@import "partials/base";
+@import "modules/mixins";
+
+// Bourbon v4.0.2
+@import "vendor/bourbon/bourbon";
+
+// Partials
+@import "partials/normalize";
+@import "partials/scaffolding";
+@import "partials/typography";
+@import "partials/buttons";
+@import "partials/animations";
+
+// Site
+@import "partials/header";
+@import "partials/nav-primary";
+@import "partials/intro";
+@import "partials/testimonials";
+
+// Font Awesome v4.1.0
+@import "vendor/font-awesome/font-awesome";

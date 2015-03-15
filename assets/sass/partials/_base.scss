@@ -1,0 +1,49 @@
+//
+// Base Configuration
+// --------------------------------------------------
+
+// App specific colors
+$primary-color:             #FABE28;
+$primary-color-dark:        #1e9bf0;
+$primary-color-darker:      #1889d6;
+$primary-color-darkest:     #033f70;
+
+// Neutral colors
+$black:                     #000;
+$gray-darker:               #222;
+$gray-dark:                 #333;
+$gray:                      #555;
+$gray-light:                #b7b7b7;
+$gray-lighter:              #eee;
+$white:                     #fff;
+
+// Body styles
+$body-bg:                   $white;
+$highlight-color:           $primary-color;
+$link-color:                $primary-color;
+$link-hover-color:          $primary-color;
+
+// Font weights
+$font-weight-light:         300;
+$font-weight-regular:       400;
+$font-weight-bold:          700;
+$font-weight-heavy:         900;
+
+// Font families
+$font-family-sans-serif:    "tablet-gothic-compressed", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$font-family-serif:         "ff-meta-serif-web-pro", Georgia, "Times New Roman", Times, serif !default;
+
+// Base font
+$base-font-family:          $font-family-sans-serif;
+$base-font-weight:          $font-weight-regular;
+$base-font-size:            14px;
+$base-line-height:          1.4;
+$base-text-color:           #000;
+
+// Heading font
+$heading-font-family:       $font-family-sans-serif;
+$heading-font-weight:       500;
+
+// Border Radius
+$border-radius-small:       2px;
+$border-radius-large:       4px;

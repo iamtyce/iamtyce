@@ -1,0 +1,37 @@
+//
+// Primary Header
+// --------------------------------------------------
+
+.header {
+  @include opacity(.4);
+  @include transition(opacity .2s);
+  @include display(flex);
+  @include flex-direction(row);
+  @include justify-content(space-between);
+  // @include align-items(center);
+
+  // @include animation(loadHeader 1s ease-in);
+  // @include animation-delay(2s);
+
+  width: 100%;
+  padding: 30px;
+  // background: rgba(0,0,0,.3);
+  position: absolute;
+  top: 0;
+
+  &:hover {
+    @include opacity(1);
+  }
+}
+
+.header__logo {  
+  @include opacity(.4);
+  @include transition(opacity .2s);
+
+  max-height: 25px;
+  cursor: pointer;
+
+  &:hover {
+    @include opacity(1);
+  }
+}

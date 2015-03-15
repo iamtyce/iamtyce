@@ -1,0 +1,13 @@
+//
+// Animations
+// --------------------------------------------------
+
+@include keyframes(loadHeader) {
+  0% {
+    @include transform(translateY(-100px));
+  }
+
+  100% {
+    @include transform(translateY(0));
+  }
+}
