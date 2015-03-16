@@ -1,0 +1,45 @@
+//
+// Primary Footer
+// --------------------------------------------------
+
+.footer {
+
+  @include display(flex);
+  @include flex-direction(column);
+  @include justify-content(space-between);
+  @include align-items(center);
+
+  background: #111 url("../images/bg/hot-springs.jpg") center center no-repeat;
+  background-size: cover;
+  padding: 100vh 0 30px;
+
+  > * {
+    @include opacity(.2);
+    @include transition(opacity .2s);
+  }
+
+  &:hover {
+    > * {
+      @include opacity(1);
+    }
+  }
+}
+
+.footer__social {
+  margin: 0 0 15px;
+}
+
+.footer__social__link {
+  @include transition(color .2s);
+
+  margin: 0 3px;
+  color: #fff;
+  font-size: 1.5em;
+}
+
+.footer__social__link__icon {}
+
+.footer__copyright {
+  color: #aaa;
+  font-size: 1.2em;
+}

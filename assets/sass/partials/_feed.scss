@@ -1,0 +1,115 @@
+//
+// Online Feed
+// --------------------------------------------------
+
+.feed {
+  background: #2e2e2e url("../images/bg/castro.jpg") center center no-repeat;
+  background-size: cover;
+  position: relative;
+  color: #fff;
+
+  &:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.5);
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  > * {
+    z-index: 2;
+  }
+}
+
+.feed__section {
+  @include opacity(.6);
+  @include transition(opacity .2s);
+
+  margin: 150px 0 0;
+
+  &:hover {
+    @include opacity(1);
+  }
+}
+
+.feed__section__title {
+
+  color: #fff;
+  line-height: .4em;
+  // font-size: 2.5em;
+}
+
+.feed__section__title__link {
+  @include transition(color .2s);
+
+  color: #fff;
+
+  &:hover {
+    color: $primary-color;
+    text-decoration: none;
+  }
+}
+
+.feed__section__title__name {
+  display: block;
+  font-size: .4em;
+}
+
+.feed__section__title__name--second {
+  display: none;
+}
+
+.feed__list {
+  @include display(flex);
+  @include flex-direction(row);
+  @include justify-content(space-between);
+  @include align-items(center);
+
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  list-style-type: none;
+  clear: both;
+}
+
+.feed__list__item,
+.feed__list--codepen > div {
+  @include transition(border .2s);
+
+  max-width: 24%;
+  border: 4px solid transparent;
+
+  &:hover {
+    border: 4px solid $primary-color;
+  }
+}
+
+// Dribbble
+
+.feed__section--dribbble {}
+
+.feed__section--dribbble__image {
+  max-width: 100%;
+}
+
+.feed__list__item--dribbble {}
+
+// CodePen
+
+.feed__list--codepen {
+  @include flex-wrap(wrap);
+
+  iframe {
+    display: block;
+  }
+  
+  > div {
+    width: 49.4%;
+    max-width: none;
+    margin: 0 0 10px;
+  }
+}

@@ -1,0 +1,1 @@
+var callback=function(e){var a="";e.shots.forEach(function(e){a+='<li class="feed__dribbble__list__item">',a+='<a href="'+e.url+'">',a+='<img src="'+e.image_url+'" ',a+='alt="'+e.title+'"></a></li>'}),document.getElementByClass("shotsByPlayerId").innerHTML=a};jribbble.getShotsByPlayerId("iamtyce",callback,{page:1,per_page:4});
