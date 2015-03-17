@@ -5,7 +5,6 @@
 .testimonials {
   width: 100%;
   height: 80%;
-  background: #ccc;
 }
 
 // Slider
@@ -51,7 +50,7 @@
   @include justify-content(center);
   @include align-items(center);
   
-  padding: 1% 3%;
+  padding: 1% 4%;
   font-size: 24px;
   font-size: 3vmin;
   color: #fff;
@@ -70,12 +69,23 @@
   margin: 3vh;
   font-size: inherit;
   font-family: $font-family-sans-serif;
+  font-weight: 300;
+  color: #000;
 }
 
 .testimonial__author {
   display: block;
-  font-style: italic;
   font-family: $font-family-serif;
+  font-size: 85%;
+  color: #aaa;
+}
+
+.testimonial__meta {
+  display: block;
+  // font-style: italic;
+  font-family: $font-family-serif;
+  font-size: 60%;
+  font-style: italic;
   color: #aaa;
 }
 
@@ -110,19 +120,20 @@
 }
 
 .slideControl {
+  @include opacity(.3);
+
   padding: 6px;
-  background: #FFFFFF;
+  background: $primary-color;
   position: absolute;
   left: 50%;
-  bottom: 25px;
+  bottom: 35px;
   border-radius: 20px;
-  opacity: 0.3;
   cursor: pointer;
   z-index: 999;
   display: inline-block;
   
   &:hover{
-    opacity: 1;
+    @include opacity(1);
   }
 }
 
