@@ -686,32 +686,195 @@ p {
   .meta-location__link:hover {
     color: inherit; }
 
-.testimonial-block {
-  margin: 20px 5%;
-  width: 40%;
-  float: left;
-  display: block; }
-  .testimonial-block:last-child {
-    padding-top: 60px;
-    clear: both;
-    width: 90%;
-    float: none; }
+.testimonials {
+  width: 100%;
+  height: 80%;
+  background: #ccc; }
 
-.testimonial-block__copy {
-  font-size: 1.2em;
+.slider {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden; }
+
+.slider__inner {
+  width: 100%;
+  height: 100%;
+  display: block;
+  overflow: hidden;
   position: relative; }
 
-.testimonial-block__image {
-  max-height: 50px; }
+.slider__inner__overflow {
+  -webkit-transition: all ease-in-out 0.3s;
+  -moz-transition: all ease-in-out 0.3s;
+  transition: all ease-in-out 0.3s;
+  width: 500%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: 1; }
 
-.testimonial-block__author {
-  font-size: 2em;
-  display: block; }
+.slider__slide {
+  height: 100%;
+  width: 20%;
+  float: left; }
 
-.testimonial-block__meta {
-  font-size: 1.2em;
+.testimonial {
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  box-orient: vertical;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-direction: column;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  box-pack: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  box-align: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  -ms-flex-align: center;
+  padding: 1% 3%;
+  font-size: 24px;
+  font-size: 3vmin;
+  color: #fff;
+  text-align: center; }
+
+.testimonial__avatar {
+  border-radius: 100%;
+  width: auto;
+  height: 15vmin; }
+
+.testimonial__copy {
+  margin: 3vh;
+  font-size: inherit;
+  font-family: "tablet-gothic-compressed", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+
+.testimonial__author {
   display: block;
-  color: #555; }
+  font-style: italic;
+  font-family: "ff-meta-serif-web-pro", Georgia, "Times New Roman", Times, serif;
+  color: #aaa; }
+
+.banner__image {
+  max-width: 100%; }
+
+.control {
+  display: none; }
+
+#Slide1:checked ~ .slider__inner__overflow {
+  margin-left: 0%; }
+
+#Slide1:checked + #s1 {
+  opacity: 1; }
+
+/*$test: $slideCount / 2;
+
+@if ($i <= $test) {
+  #s1{ margin-left: -15px; }
+} @else {
+  #s1{ margin-left: 3px; }
+}*/
+#Slide2:checked ~ .slider__inner__overflow {
+  margin-left: -100%; }
+
+#Slide2:checked + #s2 {
+  opacity: 1; }
+
+/*$test: $slideCount / 2;
+
+@if ($i <= $test) {
+  #s2{ margin-left: -30px; }
+} @else {
+  #s2{ margin-left: 6px; }
+}*/
+#Slide3:checked ~ .slider__inner__overflow {
+  margin-left: -200%; }
+
+#Slide3:checked + #s3 {
+  opacity: 1; }
+
+/*$test: $slideCount / 2;
+
+@if ($i <= $test) {
+  #s3{ margin-left: -45px; }
+} @else {
+  #s3{ margin-left: 9px; }
+}*/
+#Slide4:checked ~ .slider__inner__overflow {
+  margin-left: -300%; }
+
+#Slide4:checked + #s4 {
+  opacity: 1; }
+
+/*$test: $slideCount / 2;
+
+@if ($i <= $test) {
+  #s4{ margin-left: -60px; }
+} @else {
+  #s4{ margin-left: 12px; }
+}*/
+#Slide5:checked ~ .slider__inner__overflow {
+  margin-left: -400%; }
+
+#Slide5:checked + #s5 {
+  opacity: 1; }
+
+/*$test: $slideCount / 2;
+
+@if ($i <= $test) {
+  #s5{ margin-left: -75px; }
+} @else {
+  #s5{ margin-left: 15px; }
+}*/
+.slideControl {
+  padding: 6px;
+  background: #FFFFFF;
+  position: absolute;
+  left: 50%;
+  bottom: 25px;
+  border-radius: 20px;
+  opacity: 0.3;
+  cursor: pointer;
+  z-index: 999;
+  display: inline-block; }
+  .slideControl:hover {
+    opacity: 1; }
+
+#s1 {
+  margin-left: -40px; }
+
+#s2 {
+  margin-left: -20px; }
+
+#s3 {
+  margin-left: 0; }
+
+#s4 {
+  margin-left: 20px; }
+
+#s5 {
+  margin-left: 40px; }
 
 .feed {
   background: #2e2e2e url("../images/bg/castro.jpg") center center no-repeat;

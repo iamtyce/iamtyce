@@ -47,3 +47,8 @@ $heading-font-weight:       500;
 // Border Radius
 $border-radius-small:       2px;
 $border-radius-large:       4px;
+
+// Testimonials
+$slideCount:                5;
+$slideWidth:                #{(100 / $slideCount)}#{"%"};
+$slideWrapperWidth:         #{($slideCount * 100)}#{"%"};
