@@ -53,6 +53,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/images\/bg\/japan-temple.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 498752,
+		"inputAbbreviatedPath": "\/images\/bg\/japan-temple.jpg",
+		"outputAbbreviatedPath": "\/images\/bg\/japan-temple.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/images\/bg\/mountains-1.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
@@ -324,6 +335,39 @@
 		"initialSize": 83992,
 		"inputAbbreviatedPath": "\/images\/work\/keepers.png",
 		"outputAbbreviatedPath": "\/images\/work\/keepers.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/images\/work\/stagelabel-bg.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 34918,
+		"inputAbbreviatedPath": "\/images\/work\/stagelabel-bg.jpg",
+		"outputAbbreviatedPath": "\/images\/work\/stagelabel-bg.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/images\/work\/stagelabel-mockup.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1.31266e+06,
+		"inputAbbreviatedPath": "\/images\/work\/stagelabel-mockup.jpg",
+		"outputAbbreviatedPath": "\/images\/work\/stagelabel-mockup.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/images\/work\/stagelabel-mockup.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 0,
+		"inputAbbreviatedPath": "\/images\/work\/stagelabel-mockup.png",
+		"outputAbbreviatedPath": "\/images\/work\/stagelabel-mockup.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
