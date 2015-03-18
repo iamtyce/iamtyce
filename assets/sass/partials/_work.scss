@@ -1,0 +1,95 @@
+//
+// Work
+// --------------------------------------------------
+
+.work {
+  // @include transition(background-size .4s);
+  // @include justify-content(flex-start);
+
+  color: #fff;  
+  background: #2e2e2e url("../images/bg/japan-temple.jpg") center center no-repeat;
+  background-size: cover;
+  min-height: 0;
+
+  // position: relative;
+  // background: #2e2e2e url("../images/work/stagelabel-mockup.jpg") center center no-repeat;
+}
+
+.work__block {
+  padding: 150px 0 0;
+  text-align: center;
+}
+
+.work__block__logo {
+  margin: 0 auto 100px;
+  max-width: 50%;
+}
+
+.work__block__wrapper {
+  @include display(flex);
+  @include flex-direction(row);
+  @include justify-content(center);
+  @include align-items(center);
+}
+
+.work__block__column {
+  padding: 0 2%;
+  width: 44%;
+}
+
+.work__block__column--lhs {}
+
+.work__block__column--rhs {}
+
+.work__block__column--text {
+  text-align: center;
+}
+
+.work__block--stagelabel {}
+
+.work__block--keepers {
+  background: url("../images/work/keepers.png") center center no-repeat;
+  background-size: cover;
+}
+
+.work__block__wrap {}
+
+.work__block__title {
+  margin: 0 0 15px;
+  font-size: 3.2em;
+  line-height: 1em;
+  text-transform: uppercase;
+}
+
+.work__block__icons {
+  margin: 0 0 15px;
+  font-size: 2.5em;
+
+  i {
+    margin-right: 5px;
+  }
+}
+
+.work__block__meta {
+  font-family: $font-family-serif;
+  font-size: 1.1em;
+}
+
+.work__block__copy {
+  font-size: 1.5em;
+}
+
+.work__block__link {
+  margin: 10px 0 0;
+  text-transform: uppercase;
+  display: block;
+}
+
+.work__block__link__icon {
+  margin-left: 2px;
+  font-size: 80% !important;
+}
+
+.work__block__image {
+  max-width: 100%;
+}

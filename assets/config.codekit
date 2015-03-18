@@ -328,17 +328,6 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/images\/work\/keepers.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 83992,
-		"inputAbbreviatedPath": "\/images\/work\/keepers.png",
-		"outputAbbreviatedPath": "\/images\/work\/keepers.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
 	"\/images\/work\/stagelabel-bg.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
@@ -346,6 +335,72 @@
 		"initialSize": 34918,
 		"inputAbbreviatedPath": "\/images\/work\/stagelabel-bg.jpg",
 		"outputAbbreviatedPath": "\/images\/work\/stagelabel-bg.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/images\/work\/stagelabel-logo.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 6430,
+		"inputAbbreviatedPath": "\/images\/work\/stagelabel-logo.png",
+		"outputAbbreviatedPath": "\/images\/work\/stagelabel-logo.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/images\/work\/stagelabel-mockup-1.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 270905,
+		"inputAbbreviatedPath": "\/images\/work\/stagelabel-mockup-1.jpg",
+		"outputAbbreviatedPath": "\/images\/work\/stagelabel-mockup-1.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/images\/work\/stagelabel-mockup-2.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 357107,
+		"inputAbbreviatedPath": "\/images\/work\/stagelabel-mockup-2.jpg",
+		"outputAbbreviatedPath": "\/images\/work\/stagelabel-mockup-2.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/images\/work\/stagelabel-mockup-3.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 413009,
+		"inputAbbreviatedPath": "\/images\/work\/stagelabel-mockup-3.jpg",
+		"outputAbbreviatedPath": "\/images\/work\/stagelabel-mockup-3.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/images\/work\/stagelabel-mockup-4.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 505759,
+		"inputAbbreviatedPath": "\/images\/work\/stagelabel-mockup-4.jpg",
+		"outputAbbreviatedPath": "\/images\/work\/stagelabel-mockup-4.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/images\/work\/stagelabel-mockup-5.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 568763,
+		"inputAbbreviatedPath": "\/images\/work\/stagelabel-mockup-5.jpg",
+		"outputAbbreviatedPath": "\/images\/work\/stagelabel-mockup-5.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -368,17 +423,6 @@
 		"initialSize": 0,
 		"inputAbbreviatedPath": "\/images\/work\/stagelabel-mockup.png",
 		"outputAbbreviatedPath": "\/images\/work\/stagelabel-mockup.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/images\/work\/stagelabel.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 1.33943e+06,
-		"inputAbbreviatedPath": "\/images\/work\/stagelabel.png",
-		"outputAbbreviatedPath": "\/images\/work\/stagelabel.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -584,6 +628,22 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/sass\/partials\/_typography.scss",
 		"outputAbbreviatedPath": "\/sass\/css\/_typography.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"shouldRunAutoprefixer": 0,
+		"shouldRunBless": 0,
+		"useLibsass": 0
+		},
+	"\/sass\/partials\/_work.scss": {
+		"createSourceMap": 0,
+		"debugStyle": 0,
+		"decimalPrecision": 10,
+		"fileType": 4,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/sass\/partials\/_work.scss",
+		"outputAbbreviatedPath": "\/sass\/css\/_work.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,

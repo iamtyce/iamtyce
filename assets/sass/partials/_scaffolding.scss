@@ -58,6 +58,7 @@ textarea {
   min-height: 100%;
   padding: 10%;
   z-index: 1;
+  position: relative;
 }
 
 
@@ -93,6 +94,7 @@ figure {
 
 img {
   vertical-align: middle;
+  max-width: 100%;
 }
 
 // Responsive images (ensure images don't scale beyond their parents)

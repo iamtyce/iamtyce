@@ -251,7 +251,8 @@ textarea {
   width: 100%;
   min-height: 100%;
   padding: 10%;
-  z-index: 1; }
+  z-index: 1;
+  position: relative; }
 
 a {
   color: #FABE28;
@@ -268,7 +269,8 @@ figure {
   margin: 0; }
 
 img {
-  vertical-align: middle; }
+  vertical-align: middle;
+  max-width: 100%; }
 
 .img-responsive {
   display: block;
@@ -543,48 +545,6 @@ p {
 .friends__link__logo {
   max-height: 70px; }
 
-.work {
-  color: #fff;
-  background: #2e2e2e url("../images/bg/japan-temple.jpg") center center no-repeat;
-  background-size: cover;
-  min-height: 0; }
-
-.work__block {
-  padding: 50px 0; }
-
-.work__block--stagelabel {
-  background: url("../images/work/stagelabel-bg.jpg") center center repeat;
-  min-height: 50vh; }
-
-.work__block--keepers {
-  background: url("../images/work/keepers.png") center center no-repeat;
-  background-size: cover; }
-
-.work__block__title {
-  margin: 0 0 15px;
-  font-size: 3.2em;
-  line-height: 1em;
-  text-transform: uppercase; }
-
-.work__block__meta {
-  font-family: "ff-meta-serif-web-pro", Georgia, "Times New Roman", Times, serif;
-  font-size: 1.1em; }
-
-.work__block__copy {
-  font-size: 1em; }
-
-.work__block__link {
-  margin: 10px 0 0;
-  text-transform: uppercase;
-  display: block; }
-
-.work__block__link__icon {
-  margin-left: 2px;
-  font-size: 80% !important; }
-
-.work__block__image {
-  max-width: 100%; }
-
 .meta-location {
   opacity: 0.2;
   filter: alpha(opacity=20);
@@ -805,6 +765,96 @@ p {
 
 #s5 {
   margin-left: 40px; }
+
+.work {
+  color: #fff;
+  background: #2e2e2e url("../images/bg/japan-temple.jpg") center center no-repeat;
+  background-size: cover;
+  min-height: 0; }
+
+.work__block {
+  padding: 150px 0 0;
+  text-align: center; }
+
+.work__block__logo {
+  margin: 0 auto 100px;
+  max-width: 50%; }
+
+.work__block__wrapper {
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -moz-box-orient: horizontal;
+  box-orient: horizontal;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-direction: row;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  box-pack: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  box-align: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  -ms-flex-align: center; }
+
+.work__block__column {
+  padding: 0 2%;
+  width: 44%; }
+
+.work__block__column--text {
+  text-align: center; }
+
+.work__block--keepers {
+  background: url("../images/work/keepers.png") center center no-repeat;
+  background-size: cover; }
+
+.work__block__title {
+  margin: 0 0 15px;
+  font-size: 3.2em;
+  line-height: 1em;
+  text-transform: uppercase; }
+
+.work__block__icons {
+  margin: 0 0 15px;
+  font-size: 2.5em; }
+  .work__block__icons i {
+    margin-right: 5px; }
+
+.work__block__meta {
+  font-family: "ff-meta-serif-web-pro", Georgia, "Times New Roman", Times, serif;
+  font-size: 1.1em; }
+
+.work__block__copy {
+  font-size: 1.5em; }
+
+.work__block__link {
+  margin: 10px 0 0;
+  text-transform: uppercase;
+  display: block; }
+
+.work__block__link__icon {
+  margin-left: 2px;
+  font-size: 80% !important; }
+
+.work__block__image {
+  max-width: 100%; }
 
 .feed {
   background: #2e2e2e url("../images/bg/castro.jpg") center center no-repeat;

@@ -102,68 +102,6 @@
   max-height: 70px;
 }
 
-
-// Work
-.work {
-  // @include transition(background-size .4s);
-  // @include justify-content(flex-start);
-
-  color: #fff;  
-  background: #2e2e2e url("../images/bg/japan-temple.jpg") center center no-repeat;
-  background-size: cover;
-  min-height: 0;
-
-  // position: relative;
-  // background: #2e2e2e url("../images/work/stagelabel-mockup.jpg") center center no-repeat;
-}
-
-.work__block {
-  padding: 50px 0;
-}
-
-.work__block--stagelabel {
-  background: url("../images/work/stagelabel-bg.jpg") center center repeat;
-  min-height: 50vh;
-}
-
-.work__block--keepers {
-  background: url("../images/work/keepers.png") center center no-repeat;
-  background-size: cover;
-}
-
-.work__block__wrap {}
-
-.work__block__title {
-  margin: 0 0 15px;
-  font-size: 3.2em;
-  line-height: 1em;
-  text-transform: uppercase;
-}
-
-.work__block__meta {
-  font-family: $font-family-serif;
-  font-size: 1.1em;
-}
-
-.work__block__copy {
-  font-size: 1em;
-}
-
-.work__block__link {
-  margin: 10px 0 0;
-  text-transform: uppercase;
-  display: block;
-}
-
-.work__block__link__icon {
-  margin-left: 2px;
-  font-size: 80% !important;
-}
-
-.work__block__image {
-  max-width: 100%;
-}
-
 // Location
 .meta-location {
   @include opacity(.2);
