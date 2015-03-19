@@ -73,16 +73,39 @@
 .work__block__meta {
   font-family: $font-family-serif;
   font-size: 1.1em;
+  display: block;
+  font-style: italic;
 }
 
 .work__block__copy {
   font-size: 1.5em;
+
+  a {
+    color: inherit;
+  }
+}
+
+.work__block__byline {
+  font-size: 1.2em;
+  font-style: italic;
 }
 
 .work__block__link {
+  @include transition (color .2s, border .2s);
+
   margin: 10px 0 0;
+  padding: 10px 25px;
+  display: inline-block;
   text-transform: uppercase;
-  display: block;
+  font-size: 2em;
+  color: $gray;
+  border: 2px solid $gray;
+
+  &:hover {
+    color: $primary-color;
+    border-color: $primary-color;
+    text-decoration: none;
+  }
 }
 
 .work__block__link__icon {
@@ -92,4 +115,8 @@
 
 .work__block__image {
   max-width: 100%;
+}
+
+.work__block__image--full-width {
+  width: 100%;
 }

@@ -328,6 +328,39 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/images\/work\/keepers-logo.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 9882,
+		"inputAbbreviatedPath": "\/images\/work\/keepers-logo.png",
+		"outputAbbreviatedPath": "\/images\/work\/keepers-logo.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/images\/work\/keepers-mockup-1.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 56911,
+		"inputAbbreviatedPath": "\/images\/work\/keepers-mockup-1.jpg",
+		"outputAbbreviatedPath": "\/images\/work\/keepers-mockup-1.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/images\/work\/keepers-mockup-2.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 239863,
+		"inputAbbreviatedPath": "\/images\/work\/keepers-mockup-2.jpg",
+		"outputAbbreviatedPath": "\/images\/work\/keepers-mockup-2.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/images\/work\/stagelabel-bg.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
