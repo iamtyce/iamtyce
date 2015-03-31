@@ -4,7 +4,12 @@
 
 .testimonials {
   width: 100%;
-  height: 80%;
+  height: 100%;
+  height: 100vh;
+  
+  @include respond-to($screen-sm) {
+    height: 80%;
+  }
 }
 
 // Slider
@@ -50,11 +55,16 @@
   @include justify-content(center);
   @include align-items(center);
   
-  padding: 1% 4%;
-  font-size: 24px;
-  font-size: 3vmin;
+  padding: 1% 20px;
+  font-size: 1.3em;
   color: #fff;
   text-align: center;
+
+  @include respond-to($screen-sm) {
+    padding: 1% 4%;
+    font-size: 24px;
+    font-size: 3vmin;
+  }
 }
 
 .testimonial__wrap {}
@@ -62,7 +72,11 @@
 .testimonial__avatar {
   border-radius: 100%;
   width: auto;
-  height: 15vmin;
+  height: 80px;
+
+  @include respond-to($screen-sm) {
+    height: 15vmin;
+  }
 }
 
 .testimonial__copy {
@@ -122,7 +136,7 @@
 .slideControl {
   @include opacity(.3);
 
-  padding: 6px;
+  padding: 8px;
   background: $primary-color;
   position: absolute;
   left: 50%;
@@ -134,6 +148,10 @@
   
   &:hover{
     @include opacity(1);
+  }
+
+  @include respond-to($screen-sm) {
+    padding: 6px;
   }
 }
 

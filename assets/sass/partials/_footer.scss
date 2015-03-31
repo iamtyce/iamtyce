@@ -10,9 +10,13 @@
 
   background: #111 url("../images/bg/hot-springs.jpg") center center no-repeat;
   background-size: cover;
-  padding: 150px 0 30px;
+  padding: 80px 0;
   position: relative;
   color: #fff;
+
+  @include respond-to($screen-md) {
+    padding: 150px 0 30px;
+  }
 }
 
 .footer__social {
@@ -51,21 +55,24 @@
 // Contact Form
 
 .contact-form {
-  margin: 100px 0 0;
+  margin: 20px 0 0;
   padding: 40px;
-  width: 70%;
+  width: 100%;
   font-family: $font-family-serif;
-  min-height: 610px;
+
+  @include respond-to($screen-sm) {
+    width: 70%;
+  }
 
   @include respond-to($screen-md) {
+    margin: 100px 0 0;
     width: 40%;
+    min-height: 610px;
   }
 }
 
 .contact-form__label {
-  @include respond-to($screen-sm) {
-    display: none;
-  }
+  display: none;
 }
 
 .contact-form__label__title {
@@ -88,7 +95,8 @@
   font-size: 18px;
   line-height: 22px;
   outline: none;
-  // background: rgba(0,0,0,.5);
+  border-radius: 0;
+  -webkit-appearance: none;
 
   &:focus {
     @include placeholder(rgba(255,255,255,.5));
@@ -124,16 +132,25 @@
 
   margin-bottom: 40px;
   border-bottom: 2px solid rgba(255,255,255,.2);
-  height: 35px;
+  
+  @include respond-to($screen-md) {
+    height: 35px;
+  }
 
   &:focus {
-    height: 250px;
+    @include respond-to($screen-md) {
+      height: 250px;
+    }
   }
 }
 
 .contact-form__submit {
   margin: 0 auto;
-  width: 50%;
+  width: 100%;
   font-family: $font-family-sans-serif;
   display: block;
+
+  @include respond-to($screen-sm) {
+    width: 50%;
+  }
 }

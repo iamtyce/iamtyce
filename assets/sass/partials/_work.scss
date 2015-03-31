@@ -16,25 +16,41 @@
 }
 
 .work__block {
-  padding: 150px 0 0;
+  padding: 100px 0 0;
   text-align: center;
+
+  @include respond-to($screen-md) {
+    padding: 150px 0 0;
+  }
 }
 
 .work__block__logo {
   margin: 0 auto 100px;
-  max-width: 50%;
+  max-width: 80%;
+
+  @include respond-to($screen-md) {
+    max-width: 50%;
+  }
 }
 
 .work__block__wrapper {
   @include display(flex);
-  @include flex-direction(row);
+  @include flex-direction(column);
   @include justify-content(center);
   @include align-items(center);
+
+  @include respond-to($screen-md) {
+    @include flex-direction(row);
+  }
 }
 
 .work__block__column {
-  padding: 0 2%;
-  width: 44%;
+  padding: 0 10%;
+
+  @include respond-to($screen-md) {
+    width: 44%;
+    padding: 0 2%;
+  }
 }
 
 .work__block__column--lhs {}
@@ -124,14 +140,24 @@
 .work__block__keepers-laptop {
   width: 100%;
   height: 100%;
-  min-height: 100vh;
-  position: relative;
-  overflow: hidden;
+  
+  @include respond-to($screen-lg) {
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+  }
 }
 
 .work__block__keepers-laptop__animation {
-  position: absolute;
-  width: 65.5%;
-  left: 17.35%;
-  top: 19%;
+  margin: 20px 0;
+  max-width: 80%;
+
+  @include respond-to($screen-lg) {
+    margin: 0;
+    max-width: 0;
+    position: absolute;
+    width: 65.5%;
+    left: 17.35%;
+    top: 19%;
+  }
 }
