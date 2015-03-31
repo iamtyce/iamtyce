@@ -3,7 +3,6 @@
 // --------------------------------------------------
 
 .footer {
-
   @include display(flex);
   @include flex-direction(column);
   @include justify-content(space-between);
@@ -12,15 +11,21 @@
   background: #111 url("../images/bg/hot-springs.jpg") center center no-repeat;
   background-size: cover;
   padding: 100vh 0 30px;
+  position: relative;
 
-  > * {
+  .footer__social,
+  .footer__copyright {
     @include opacity(.2);
     @include transition(opacity .2s);
   }
 
   &:hover {
-    > * {
+    .footer__social {
       @include opacity(1);
+    }
+
+    .footer__copyright {
+      @include opacity(.7);
     }
   }
 }
