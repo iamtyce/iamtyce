@@ -547,7 +547,8 @@ p {
   max-height: 70px; }
 
 .future__logos {
-  text-align: center; }
+  text-align: center;
+  max-width: 90%; }
 
 .future__logos__image {
   opacity: 0.6;
