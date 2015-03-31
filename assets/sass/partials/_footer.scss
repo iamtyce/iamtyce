@@ -10,8 +10,9 @@
 
   background: #111 url("../images/bg/hot-springs.jpg") center center no-repeat;
   background-size: cover;
-  padding: 100vh 0 30px;
+  padding: 30px 0;
   position: relative;
+  color: #fff;
 
   .footer__social,
   .footer__copyright {
@@ -47,4 +48,93 @@
 .footer__copyright {
   color: #aaa;
   font-size: 1.2em;
+}
+
+// Contact Form
+
+.contact-form {
+  // @include display(flex);
+  // @include flex-direction(row);
+  // @include justify-content(space-between);
+  // @include align-items(stretch);
+
+  margin: 200px 0 0;
+  padding: 40px;
+  font-family: $font-family-serif;
+  width: 40%;
+  min-height: 610px;
+}
+
+.contact-form__label {
+  @include respond-to($screen-sm) {
+    display: none;
+  }
+}
+
+.contact-form__label__title {
+}
+
+.contact-form__required {}
+
+.contact-form__field {
+  @include transition(color .2s);
+  @include placeholder(rgba(255,255,255,.2));
+
+  width: 100%;
+  margin: 0 0 20px;
+  padding: 5px 0;
+  display: block;
+  background: transparent;
+  color: #fff;
+  color: rgba(255,255,255,.5);
+  border: none;
+  font-size: 18px;
+  line-height: 22px;
+  outline: none;
+  // background: rgba(0,0,0,.5);
+
+  &:focus {
+    @include placeholder(rgba(255,255,255,.5));
+
+    color: #fff;
+  }
+
+  &:hover {
+    @include placeholder(rgba(255,255,255,.5));
+  }
+
+  &:-webkit-autofill {
+      -webkit-box-shadow:0 0 0 50px #fff inset;
+      -webkit-text-fill-color: #000;
+  }
+
+  &:-webkit-autofill:focus {
+      -webkit-box-shadow: #000,0 0 0 50px white inset;
+      -webkit-text-fill-color: #000;
+  }
+}
+
+.contact-form__field--text-input {
+  border-bottom: 2px solid rgba(255,255,255,.2);
+
+  &:last-child {
+    // margin: 0;
+  }
+}
+
+.contact-form__field--textarea {
+  @include transition(height .5s);
+
+  margin-bottom: 40px;
+  border-bottom: 2px solid rgba(255,255,255,.2);
+  height: 35px;
+
+  &:focus {
+    height: 250px;
+  }
+}
+
+.contact-form__submit {
+  font-family: $font-family-sans-serif;
+  width: 100%;
 }

@@ -496,23 +496,6 @@ p {
   font-size: 9em;
   text-shadow: 0 0 5px rgba(0, 0, 0, 0.7); }
 
-.intro__button {
-  -webkit-transition: all 0.2s;
-  -moz-transition: all 0.2s;
-  transition: all 0.2s;
-  padding: 12px 20px;
-  background: transparent;
-  border: 2px solid #FABE28;
-  color: #FABE28;
-  font-size: 1.8em;
-  text-transform: uppercase;
-  text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3), inset 0 0 10px rgba(0, 0, 0, 0.3); }
-  .intro__button:hover, .intro__button:focus {
-    color: #e0a000;
-    border-color: #e0a000;
-    box-shadow: 0 0 25px rgba(0, 0, 0, 0.4), inset 0 0 25px rgba(0, 0, 0, 0.4); }
-
 .friends {
   background: #2e2e2e url("../images/bg/mountains-1.jpg") center center no-repeat;
   background-size: cover;
@@ -583,6 +566,23 @@ p {
   color: inherit; }
   .meta-location__link:hover {
     color: inherit; }
+
+.primary-button {
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  transition: all 0.2s;
+  padding: 12px 20px;
+  background: transparent;
+  border: 2px solid #FABE28;
+  color: #FABE28;
+  font-size: 1.8em;
+  text-transform: uppercase;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3), inset 0 0 10px rgba(0, 0, 0, 0.3); }
+  .primary-button:hover, .primary-button:focus {
+    color: #e0a000;
+    border-color: #e0a000;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.4), inset 0 0 25px rgba(0, 0, 0, 0.4); }
 
 .testimonials {
   width: 100%;
@@ -1061,8 +1061,9 @@ p {
   -ms-flex-align: center;
   background: #111 url("../images/bg/hot-springs.jpg") center center no-repeat;
   background-size: cover;
-  padding: 100vh 0 30px;
-  position: relative; }
+  padding: 30px 0;
+  position: relative;
+  color: #fff; }
   .footer .footer__social,
   .footer .footer__copyright {
     opacity: 0.2;
@@ -1091,6 +1092,79 @@ p {
 .footer__copyright {
   color: #aaa;
   font-size: 1.2em; }
+
+.contact-form {
+  margin: 200px 0 0;
+  padding: 40px;
+  font-family: "ff-meta-serif-web-pro", Georgia, "Times New Roman", Times, serif;
+  width: 40%;
+  min-height: 610px; }
+
+@media only screen and (min-width: 768px) {
+  .contact-form__label {
+    display: none; } }
+
+.contact-form__field {
+  -webkit-transition: color 0.2s;
+  -moz-transition: color 0.2s;
+  transition: color 0.2s;
+  width: 100%;
+  margin: 0 0 20px;
+  padding: 5px 0;
+  display: block;
+  background: transparent;
+  color: #fff;
+  color: rgba(255, 255, 255, 0.5);
+  border: none;
+  font-size: 18px;
+  line-height: 22px;
+  outline: none; }
+  .contact-form__field::-moz-placeholder {
+    color: rgba(255, 255, 255, 0.2);
+    opacity: 1; }
+  .contact-form__field:-ms-input-placeholder {
+    color: rgba(255, 255, 255, 0.2); }
+  .contact-form__field::-webkit-input-placeholder {
+    color: rgba(255, 255, 255, 0.2); }
+  .contact-form__field:focus {
+    color: #fff; }
+    .contact-form__field:focus::-moz-placeholder {
+      color: rgba(255, 255, 255, 0.5);
+      opacity: 1; }
+    .contact-form__field:focus:-ms-input-placeholder {
+      color: rgba(255, 255, 255, 0.5); }
+    .contact-form__field:focus::-webkit-input-placeholder {
+      color: rgba(255, 255, 255, 0.5); }
+  .contact-form__field:hover::-moz-placeholder {
+    color: rgba(255, 255, 255, 0.5);
+    opacity: 1; }
+  .contact-form__field:hover:-ms-input-placeholder {
+    color: rgba(255, 255, 255, 0.5); }
+  .contact-form__field:hover::-webkit-input-placeholder {
+    color: rgba(255, 255, 255, 0.5); }
+  .contact-form__field:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 50px #fff inset;
+    -webkit-text-fill-color: #000; }
+  .contact-form__field:-webkit-autofill:focus {
+    -webkit-box-shadow: #000,0 0 0 50px white inset;
+    -webkit-text-fill-color: #000; }
+
+.contact-form__field--text-input {
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2); }
+
+.contact-form__field--textarea {
+  -webkit-transition: height 0.5s;
+  -moz-transition: height 0.5s;
+  transition: height 0.5s;
+  margin-bottom: 40px;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+  height: 35px; }
+  .contact-form__field--textarea:focus {
+    height: 250px; }
+
+.contact-form__submit {
+  font-family: "tablet-gothic-compressed", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  width: 100%; }
 
 /*!
  *  Font Awesome 4.3.0 by @davegandy - http://fontawesome.io - @fontawesome

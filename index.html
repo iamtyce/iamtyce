@@ -49,7 +49,7 @@
       <span class="intro__byline">SASS ~ CSS3 ~ HTML5</span>
       <span class="intro__header">UI Developer</span>
       <!-- <span class="intro__byline"><i class="fa fa-map-marker"></i> Melbourne, AU</span> -->
-      <button class="intro__button">There's more to the story...</button>
+      <button class="primary-button intro__button">There's more to the story...</button>
       <span class="meta-location">
         <i class="fa fa-map-marker"></i> <a href="http://wikitravel.org/en/Tayrona_National_Park" target="_blank" title="View on WikiTravel" class="meta-location__link">Tayrona National Park, Columbia</a>
       </span>
@@ -334,52 +334,52 @@
 
     <footer class="footer">
 
-      <!-- <h4>4.</h4>
+      <!-- <h4>6.</h4>
       
-      <h1>Contact</h1> -->
+      <h1>Get in touch</h1> -->
 
-      <form action="https://docs.google.com/a/iamtyce.com/forms/d/119WwYAanqdNunNIyVOSibIEtH1Mq6L-Xgu4DL6-w2Bo/formResponse" method="POST" id="ss-form" target="_blank" onsubmit="">
+      <form action="https://docs.google.com/a/iamtyce.com/forms/d/119WwYAanqdNunNIyVOSibIEtH1Mq6L-Xgu4DL6-w2Bo/formResponse" method="POST" id="ss-form" target="_blank" onsubmit="" class="contact-form">
 
-        <label class="ss-q-item-label" for="entry_896089790">
-          <div class="ss-q-title">Name
+        <label class="contact-form__label" for="entry_896089790">
+          <div class="contact-form__label__title">Name
             <label for="itemView.getDomIdToLabel()" aria-label="(Required field)"></label>
-            <span class="ss-required-asterisk" aria-hidden="true">*</span>
+            <span class="contact-form__required" aria-hidden="true">*</span>
+          </div>
+        </label>
+        
+        <input type="text" name="entry.896089790" placeholder="Full name" value="" class="contact-form__field contact-form__field--text-input" id="entry_896089790" dir="auto" aria-label="Name" aria-required="true" required="true" title="Name">
+        
+        <label class="contact-form__label" for="entry_1240547002">
+          <div class="contact-form__label__title">Email
+            <label for="itemView.getDomIdToLabel()" aria-label="(Required field)"></label>
+            <span class="contact-form__required" aria-hidden="true">*</span>
+          </div>
+        </label>
+        
+        <input type="email" name="entry.1240547002" placeholder="Email address" value="" class="contact-form__field contact-form__field--text-input" id="entry_1240547002" dir="auto" aria-label="Must be a valid email address" aria-required="true" required="true" title="Must be a valid email address">
+        
+        <label class="contact-form__label" for="entry_1969380077">
+          <div class="contact-form__label__title">Phone</div>
+        </label>
+
+        <input type="text" name="entry.1969380077" placeholder="Phone" value="" class="contact-form__field contact-form__field--text-input" id="entry_1969380077" dir="auto" aria-label="Phone" title="">
+
+        <label class="contact-form__label" for="entry_169376619">
+          <div class="contact-form__label__title">Comment
+            <label for="itemView.getDomIdToLabel()" aria-label="(Required field)"></label>
+            <span class="contact-form__required" aria-hidden="true">*</span>
           </div>
         </label>
 
-        <input type="text" name="entry.896089790" value="" class="ss-q-short" id="entry_896089790" dir="auto" aria-label="Name" aria-required="true" required="true" title="Name">
-
-        <label class="ss-q-item-label" for="entry_1240547002">
-          <div class="ss-q-title">Email
-            <label for="itemView.getDomIdToLabel()" aria-label="(Required field)"></label>
-            <span class="ss-required-asterisk" aria-hidden="true">*</span>
-          </div>
-        </label>
-
-        <input type="email" name="entry.1240547002" value="" class="ss-q-short" id="entry_1240547002" dir="auto" aria-label="Email  Must be a valid email address" aria-required="true" required="" title="Must be a valid email address">
-
-        <label class="ss-q-item-label" for="entry_1969380077">
-          <div class="ss-q-title">Phone</div>
-        </label>
-
-        <input type="text" name="entry.1969380077" value="" class="ss-q-short" id="entry_1969380077" dir="auto" aria-label="Phone  " title="">
-
-        <label class="ss-q-item-label" for="entry_169376619">
-          <div class="ss-q-title">Comment
-            <label for="itemView.getDomIdToLabel()" aria-label="(Required field)"></label>
-            <span class="ss-required-asterisk" aria-hidden="true">*</span>
-          </div>
-        </label>
-
-        <textarea name="entry.169376619" rows="8" cols="0" class="ss-q-long" id="entry_169376619" dir="auto" aria-label="Comment  " aria-required="true" required=""></textarea>
-
+        <textarea name="entry.169376619" rows="8" cols="0" class="contact-form__field contact-form__field--textarea" id="entry_169376619" dir="auto" aria-label="Comment" aria-required="true" required="true" placeholder="What's on your mind?"></textarea>
+        
         <input type="hidden" name="draftResponse" value="[,,&quot;5719328054941792635&quot;]
         ">
         <input type="hidden" name="pageHistory" value="0">
         <input type="hidden" name="fbzx" value="5719328054941792635">
-
-        <input type="submit" name="submit" value="Submit" id="ss-submit" class="jfk-button jfk-button-action ">
         
+        <input type="submit" name="submit" value="Send it!" id="ss-submit" class="primary-button contact-form__submit">
+
       </form>
 
       <nav class="footer__social">
