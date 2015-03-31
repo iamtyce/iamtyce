@@ -13,26 +13,17 @@
   padding: 30px 0;
   position: relative;
   color: #fff;
-
-  .footer__social,
-  .footer__copyright {
-    @include opacity(.2);
-    @include transition(opacity .2s);
-  }
-
-  &:hover {
-    .footer__social {
-      @include opacity(1);
-    }
-
-    .footer__copyright {
-      @include opacity(.7);
-    }
-  }
 }
 
 .footer__social {
+  @include opacity(.2);
+  @include transition(opacity .2s);
+
   margin: 0 0 15px;
+
+  &:hover {
+    @include opacity(1);
+  }
 }
 
 .footer__social__link {
@@ -46,8 +37,15 @@
 .footer__social__link__icon {}
 
 .footer__copyright {
+  @include opacity(.2);
+  @include transition(opacity .2s);
+
   color: #aaa;
   font-size: 1.2em;
+
+  &:hover {
+    @include opacity(.7);
+  }
 }
 
 // Contact Form
