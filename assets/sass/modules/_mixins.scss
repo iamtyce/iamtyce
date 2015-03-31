@@ -35,3 +35,16 @@
   $opacity-ie: ($opacity * 100);
   filter: #{alpha(opacity=$opacity-ie)};
 }
+
+// ******************** //
+//      RESPOND TO      //
+// ******************** //
+// Use: @include respond-to(screen-xs) { }
+
+@mixin respond-to($breakpoint) {
+  @media only #{$media} and ($feature: #{$breakpoint}) { @content }
+}
+
+@mixin respond-to-max($breakpoint) {
+  @media only #{$media} and ($feature-alt: #{$breakpoint}) { @content }
+}

@@ -97,6 +97,94 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/images\/future\/shopify.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 16665,
+		"inputAbbreviatedPath": "\/images\/future\/shopify.jpg",
+		"outputAbbreviatedPath": "\/images\/future\/shopify.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/images\/future\/shopify.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 14848,
+		"inputAbbreviatedPath": "\/images\/future\/shopify.png",
+		"outputAbbreviatedPath": "\/images\/future\/shopify.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/images\/future\/spotify-black.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 20817,
+		"inputAbbreviatedPath": "\/images\/future\/spotify-black.png",
+		"outputAbbreviatedPath": "\/images\/future\/spotify-black.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/images\/future\/spotify.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 16490,
+		"inputAbbreviatedPath": "\/images\/future\/spotify.jpg",
+		"outputAbbreviatedPath": "\/images\/future\/spotify.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/images\/future\/square.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 82441,
+		"inputAbbreviatedPath": "\/images\/future\/square.jpg",
+		"outputAbbreviatedPath": "\/images\/future\/square.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/images\/future\/squarespace.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 29069,
+		"inputAbbreviatedPath": "\/images\/future\/squarespace.jpg",
+		"outputAbbreviatedPath": "\/images\/future\/squarespace.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/images\/future\/valve.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 11884,
+		"inputAbbreviatedPath": "\/images\/future\/valve.jpg",
+		"outputAbbreviatedPath": "\/images\/future\/valve.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/images\/future\/valve.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 0,
+		"inputAbbreviatedPath": "\/images\/future\/valve.png",
+		"outputAbbreviatedPath": "\/images\/future\/valve.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/images\/iamtyce-horizontal-lrg.png": {
 		"fileType": 32768,
 		"ignore": 0,
