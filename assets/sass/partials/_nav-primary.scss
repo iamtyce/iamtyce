@@ -8,18 +8,31 @@
   @include display(flex);
   @include flex-direction(row);
   @include justify-content(space-between);
+  @include flex-wrap(wrap);
 
-  margin: 0;
+  margin: 20px auto 0;
   padding: 0;
   list-style-type: none;
+
+  @include respond-to($screen-sm) {
+    @include flex-wrap(nowrap);
+
+    width: 80%;
+  }
+
+  @include respond-to($screen-md) {
+    margin: 0;
+    width: auto;
+  }
 }
 
 .nav-primary__list__item {  
   @include opacity(.4);
   @include transition(opacity .2s);
 
-  margin: 0;
-  padding: 0 15px;
+  margin: 2px 0;
+  padding: 0 10px;
+  width: 33%;
   font-weight: 100;
   text-transform: uppercase;
   font-size: 1.5em;
@@ -28,5 +41,20 @@
 
   &:hover {
     @include opacity(1);
+  }
+
+  @include respond-to($screen-sm) {
+    margin: 0;
+    padding: 0 15px;
+    width: auto;
+  }
+}
+
+.nav-primary__list__item__link {
+  color: inherit;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: none;
   }
 }

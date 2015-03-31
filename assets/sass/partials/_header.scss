@@ -5,19 +5,17 @@
 .header {
   @include opacity(.4);
   @include transition(opacity .2s);
-  @include display(flex);
-  @include flex-direction(row);
-  @include justify-content(space-between);
-  // @include align-items(center);
-
-  // @include animation(loadHeader 1s ease-in);
-  // @include animation-delay(2s);
 
   width: 100%;
   padding: 30px;
-  // background: rgba(0,0,0,.3);
   position: absolute;
   top: 0;
+
+  @include respond-to($screen-md) {
+    @include display(flex);
+    @include flex-direction(row);
+    @include justify-content(space-between);
+  }
 
   &:hover {
     @include opacity(1);
@@ -27,11 +25,17 @@
 .header__logo {  
   @include opacity(.4);
   @include transition(opacity .2s);
-
+  
+  margin: 0 auto;
   max-height: 25px;
   cursor: pointer;
+  display: block;
 
   &:hover {
     @include opacity(1);
+  }
+
+  @include respond-to($screen-md) {
+    margin: 0;
   }
 }
