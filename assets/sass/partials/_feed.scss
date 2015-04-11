@@ -42,6 +42,12 @@
   }
 }
 
+.feed__section--codepen {
+  @include respond-to-max($screen-sm) {
+    display: none;
+  }
+}
+
 .feed__section__title {
 
   color: #fff;
