@@ -63,10 +63,7 @@
 
 .work__block--stagelabel {}
 
-.work__block--keepers {
-  background: url("../images/work/keepers.png") center center no-repeat;
-  background-size: cover;
-}
+.work__block--keepers {}
 
 .work__block__wrap {}
 
@@ -154,7 +151,7 @@
 
   @include respond-to($screen-lg) {
     margin: 0;
-    max-width: 0;
+    max-width: none;
     position: absolute;
     width: 65.5%;
     left: 17.35%;
