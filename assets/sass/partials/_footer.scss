@@ -67,7 +67,7 @@
   @include respond-to($screen-md) {
     margin: 100px 0 0;
     width: 40%;
-    min-height: 610px;
+    min-height: 710px;
   }
 }
 
@@ -152,5 +152,22 @@
 
   @include respond-to($screen-sm) {
     width: 50%;
+  }
+}
+
+.contact-form__recaptcha {
+  width: 304px;
+  margin: 0 auto 30px;
+  text-align: center;
+  
+  @include respond-to($screen-lg) {
+    @include transition(opacity .2s);
+    @include opacity(.4);
+  }
+
+  &:hover {
+    @include respond-to($screen-lg) {
+      @include opacity(1);
+    }
   }
 }
