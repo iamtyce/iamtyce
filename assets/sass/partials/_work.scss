@@ -51,11 +51,27 @@
     width: 44%;
     padding: 0 2%;
   }
+
+  //IE9
+  .ie9 & {
+    width: 50%;
+    padding: 0 10%;
+  }
 }
 
-.work__block__column--lhs {}
+.work__block__column--lhs {
+  //IE9
+  .ie9 & {
+    float: left;
+  }
+}
 
-.work__block__column--rhs {}
+.work__block__column--rhs {
+  //IE9
+  .ie9 & {
+    float: right;
+  }
+}
 
 .work__block__column--text {
   text-align: center;
