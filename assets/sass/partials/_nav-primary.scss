@@ -14,6 +14,12 @@
   padding: 0;
   list-style-type: none;
 
+  //IE9
+  .ie9 & {
+    display: table;
+    float: right;
+  }
+
   @include respond-to($screen-sm) {
     @include flex-wrap(nowrap);
 
@@ -29,6 +35,11 @@
 .nav-primary__list__item {  
   @include opacity(.4);
   @include transition(opacity .2s);
+
+  //IE9
+  .ie9 & {
+    display: table-cell;
+  }
 
   margin: 2px 0;
   padding: 0 10px;

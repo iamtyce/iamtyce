@@ -60,6 +60,11 @@ textarea {
   padding: 10%;
   z-index: 1;
   position: relative;
+
+  //IE9
+  .ie9 & {
+    text-align: center;
+  }
 }
 
 
