@@ -35,6 +35,11 @@
     margin: 150px 0 0;
   }
 
+  //IE9
+  .ie9 & {
+    @include opacity(1);
+  }
+
   &:hover {
     @include respond-to($screen-md) {
       @include opacity(1);
@@ -87,6 +92,11 @@
   list-style-type: none;
   clear: both;
 
+  //IE9
+  .ie9 & {
+    display: block;
+  }
+
   @include respond-to($screen-md) {
     @include flex-direction(row);
   }
@@ -107,6 +117,15 @@
   @include respond-to($screen-md) {
     max-width: 24%;
     margin-bottom: 0;
+  }
+
+  //IE9
+  .ie9 & {
+    margin-left: 1%;
+    margin-right: 1%;
+    max-width: 23%;
+    display: block;
+    float: left;
   }
 }
 
@@ -135,6 +154,12 @@
 
     @include respond-to($screen-md) {
       width: 49.4%;
+      margin: 0 0 10px;
+    }
+
+    //IE9
+    .ie9 & {
+      max-width: 49.4%;
       margin: 0 0 10px;
     }
   }
