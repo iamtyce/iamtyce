@@ -81,24 +81,24 @@
 
 .testimonial__copy {
   margin: 3vh;
-  font-size: inherit;
-  font-family: $font-family-sans-serif;
+  font-size: .8em;
+  // font-family: $font-family-sans-serif;
   font-weight: 300;
   color: #000;
 }
 
 .testimonial__author {
   display: block;
-  font-family: $font-family-serif;
-  font-size: 85%;
-  color: #aaa;
+  // font-family: $font-family-serif;
+  // font-size: 85%;
+  color: #888;
 }
 
 .testimonial__meta {
   display: block;
   // font-style: italic;
-  font-family: $font-family-serif;
-  font-size: 60%;
+  // font-family: $font-family-serif;
+  font-size: 80%;
   font-style: italic;
   color: #aaa;
 }
