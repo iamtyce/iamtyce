@@ -350,17 +350,6 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/images\/testimonials\/glenn-davies.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 2494,
-		"inputAbbreviatedPath": "\/images\/testimonials\/glenn-davies.jpg",
-		"outputAbbreviatedPath": "\/images\/testimonials\/glenn-davies.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
 	"\/images\/testimonials\/glenn-davies.png": {
 		"fileType": 32768,
 		"ignore": 0,
