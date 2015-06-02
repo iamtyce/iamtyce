@@ -39,9 +39,13 @@
 .footer__social__link {
   @include transition(color .2s);
 
-  margin: 0 3px;
+  margin: 0 8px;
   color: #fff;
   font-size: 1.5em;
+
+  @include respond-to($screen-md) {
+    margin: 0 3px;
+  }
 }
 
 .footer__social__link__icon {}
@@ -73,7 +77,7 @@
   @include respond-to($screen-md) {
     margin: 100px 0 0;
     width: 40%;
-    min-height: 710px;
+    min-height: 650px;
   }
 
   //IE9
@@ -134,9 +138,14 @@
 
 .contact-form__field--text-input {
   border-bottom: 2px solid rgba(255,255,255,.2);
+}
 
-  &:last-child {
-    // margin: 0;
+.contact-form__field--select {
+  border-bottom: 2px solid rgba(255,255,255,.2);
+  color: rgba(255,255,255,.2);
+
+  &:hover {
+    color: rgba(255,255,255,.5);
   }
 }
 

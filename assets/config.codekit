@@ -141,6 +141,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/images\/future\/uber.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 12971,
+		"inputAbbreviatedPath": "\/images\/future\/uber.jpg",
+		"outputAbbreviatedPath": "\/images\/future\/uber.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/images\/future\/valve.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
