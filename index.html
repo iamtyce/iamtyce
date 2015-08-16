@@ -360,7 +360,7 @@
       <form action="http://formspree.io/tyce@iamtyce.com" method="POST" id="ss-form" target="_blank" onsubmit="" class="contact-form">
         
         <div class="contact-form__field-wrapper">
-          <input type="text" name="Name" placeholder="Full name" value="" class="contact-form__field contact-form__field--text-input" id="name" dir="auto" aria-label="Name" aria-required="true" required="true" title="Name">
+          <input type="text" name="Name" placeholder="What's your name?" value="" class="contact-form__field contact-form__field--text-input" id="name" dir="auto" aria-label="Name" aria-required="true" required="true" title="Name">
           
           <label class="contact-form__label" for="name">
             <div class="contact-form__label__title">Full name
@@ -370,7 +370,7 @@
         </div>
         
         <div class="contact-form__field-wrapper">
-          <input type="email" name="_replyto" placeholder="Email address" value="" class="contact-form__field contact-form__field--text-input" id="email" dir="auto" aria-label="Must be a valid email address" aria-required="true" required="true" title="Must be a valid email address">
+          <input type="email" name="_replyto" placeholder="Your favourite email address" value="" class="contact-form__field contact-form__field--text-input" id="email" dir="auto" aria-label="Must be a valid email address" aria-required="true" required="true" title="Must be a valid email address">
           
           <label class="contact-form__label" for="email">
             <div class="contact-form__label__title">Email address
@@ -380,7 +380,7 @@
         </div>
 
         <div class="contact-form__field-wrapper">
-          <input type="tel" name="Phone" placeholder="Phone" value="" class="contact-form__field contact-form__field--text-input" id="phone" dir="auto" aria-label="Phone" title="">
+          <input type="tel" name="Phone" placeholder="What's your phone number?" value="" class="contact-form__field contact-form__field--text-input" id="phone" dir="auto" aria-label="Phone" title="">
           
           <label class="contact-form__label" for="phone">
             <div class="contact-form__label__title">Phone</div>
@@ -390,7 +390,7 @@
         <div class="contact-form__field-wrapper">
           <i class="contact-form__field--icon fa fa-angle-down"></i>
           <select name="Timezone" id="timezone" class="contact-form__field contact-form__field--select">
-            <option value="" selected="selected">Timezone</option>
+            <option value="" selected="selected">Where are you located?</option>
             <option value="">---------------------------</option>
             <option timeZoneId="1" gmtAdjustment="GMT-12:00" useDaylightTime="0" value="-12">(GMT-12:00) International Date Line West</option>
             <option timeZoneId="2" gmtAdjustment="GMT-11:00" useDaylightTime="0" value="-11">(GMT-11:00) Midway Island, Samoa</option>
@@ -477,7 +477,7 @@
           </select> 
           
           <label class="contact-form__label" for="timezone">
-            <div class="contact-form__label__title">Location</div>
+            <div class="contact-form__label__title">Timezone</div>
           </label>
         </div>
 
@@ -485,7 +485,7 @@
           <textarea name="Comment" rows="8" cols="0" class="contact-form__field contact-form__field--textarea" id="comment" dir="auto" aria-label="Comment" aria-required="true" required="true" placeholder="What's on your mind?"></textarea>
           
           <label class="contact-form__label" for="comment">
-            <div class="contact-form__label__title">Comment
+            <div class="contact-form__label__title">Message
               <label for="itemView.getDomIdToLabel()" aria-label="(Required field)"></label>
             </div>
           </label>
@@ -493,7 +493,7 @@
 
         <input type="text" name="_gotcha" style="display:none" />
         
-        <input type="submit" name="Submit" value="Get in touch" class="primary-button contact-form__submit">
+        <button type="submit" name="Submit" class="primary-button contact-form__submit">Get in touch</button>
 
       </form>
 

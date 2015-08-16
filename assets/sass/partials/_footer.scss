@@ -94,7 +94,6 @@
   top: 0;
   display: block;
   font-size: 18px;
-  color: $primary-color;
   line-height: 22px;
   padding: 5px 0;
   // color: rgba(255,255,255,.5);
@@ -105,7 +104,15 @@
   
     display: inline-block;
     left: -130px;
+    color: $primary-color;
     border-bottom: 2px solid $primary-color;
+  }
+
+  //IE9
+  .ie9 & {
+    @include opacity(1);
+    
+    padding: 5px 0 1px;
   }
 }
 
@@ -125,7 +132,7 @@
 
 .contact-form__field {
   @include transition(color .2s);
-  @include placeholder(rgba(255,255,255,0));
+  // @include placeholder(rgba(255,255,255,0));
 
   width: 100%;
   margin: 0 0 20px;
@@ -158,6 +165,8 @@
     }
 
     & + label {
+      color: $primary-color;
+
       @include respond-to($screen-md) {
         @include opacity(1);
       }
@@ -179,10 +188,19 @@
       -webkit-box-shadow: #000,0 0 0 50px white inset;
       -webkit-text-fill-color: #000;
   }
+
+  //IE9
+  .ie9 & {
+    @include placeholder(#fff);
+  }
 }
 
 .contact-form__field--text-input {
   border-bottom: 2px solid rgba(255,255,255,.2);
+
+  // &:invalid {
+  //   border-bottom-color: #c70202;
+  // }
 }
 
 .contact-form__field--select {
@@ -193,6 +211,19 @@
 
   &:hover {
     color: rgba(255,255,255,.5);
+  }
+
+  //IE9
+  .ie9 & {
+    padding-right: 0;
+    color: $white;
+  }
+
+  &:focus {
+    //IE9
+    .ie9 & {
+      color: $black;
+    }
   }
 }
 
@@ -206,6 +237,11 @@
 
   @include respond-to($screen-md) {
     top: 4px;
+  }
+
+  //IE9
+  .ie9 & {
+    display: none;
   }
 }
 
