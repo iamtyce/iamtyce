@@ -69,6 +69,7 @@
   padding: 40px;
   width: 100%;
   font-family: $font-family-serif;
+  position: relative;
 
   @include respond-to($screen-sm) {
     width: 70%;
@@ -89,7 +90,23 @@
 }
 
 .contact-form__label {
-  display: none;
+  position: absolute;
+  top: 0;
+  display: block;
+  font-size: 18px;
+  color: $primary-color;
+  line-height: 22px;
+  padding: 5px 0;
+  // color: rgba(255,255,255,.5);
+
+  @include respond-to($screen-md) {
+    @include transition(opacity .5s);
+    @include opacity(0);
+  
+    display: inline-block;
+    left: -130px;
+    border-bottom: 2px solid $primary-color;
+  }
 }
 
 .contact-form__label__title {
@@ -97,9 +114,18 @@
 
 .contact-form__required {}
 
+.contact-form__field-wrapper {
+  display: block;
+  position: relative;
+
+  @include respond-to-max($screen-md) {
+    padding: 30px 0 20px;
+  }
+}
+
 .contact-form__field {
   @include transition(color .2s);
-  @include placeholder(rgba(255,255,255,.2));
+  @include placeholder(rgba(255,255,255,0));
 
   width: 100%;
   margin: 0 0 20px;
@@ -115,14 +141,33 @@
   border-radius: 0;
   -webkit-appearance: none;
 
-  &:focus {
-    @include placeholder(rgba(255,255,255,.5));
 
+  @include respond-to($screen-md) {
+    @include placeholder(rgba(255,255,255,.2));
+  }
+
+  &:focus {
     color: #fff;
+
+    @include respond-to($screen-md) {
+      @include placeholder(rgba(255,255,255,0));
+    }
+
+    &:hover {
+      @include placeholder(rgba(255,255,255,0));
+    }
+
+    & + label {
+      @include respond-to($screen-md) {
+        @include opacity(1);
+      }
+    }
   }
 
   &:hover {
-    @include placeholder(rgba(255,255,255,.5));
+    @include respond-to($screen-md) {
+      @include placeholder(rgba(255,255,255,.5));
+    }
   }
 
   &:-webkit-autofill {
@@ -143,9 +188,24 @@
 .contact-form__field--select {
   border-bottom: 2px solid rgba(255,255,255,.2);
   color: rgba(255,255,255,.2);
+  cursor: pointer;
+  padding-right: 20px;
 
   &:hover {
     color: rgba(255,255,255,.5);
+  }
+}
+
+.contact-form__field--icon {
+  position: absolute;
+  top: 34px;
+  right: 0;
+  z-index: 2;
+  font-size: 18px !important;
+  color: rgba(255,255,255,.5);
+
+  @include respond-to($screen-md) {
+    top: 4px;
   }
 }
 
