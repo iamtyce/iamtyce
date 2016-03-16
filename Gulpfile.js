@@ -7,9 +7,10 @@
 //    1. Includes and Requirements
 //    2. SASS Automation
 //    3. JS Automation
-//    4. Live Serve
-//    5. Watch Tasks
-//    6. Build Task
+//    4. Images
+//    5. Live Serve
+//    6. Watch Tasks
+//    7. Build Task
 
 'use strict';
 
@@ -31,6 +32,8 @@ var gulp              = require('gulp'),
     stripDebug        = require('gulp-strip-debug'),
     uglify            = require('gulp-uglify'),
     streamqueue       = require('streamqueue'),
+    imagemin          = require('gulp-imagemin'),
+    cache             = require('gulp-cache'),
     //scssLint          = require('gulp-scss-lint'),
     webserver         = require('gulp-webserver'),
 
@@ -89,8 +92,18 @@ gulp.task('scripts', function() {
 });
 
 
+// 4. Images
+//  -------------
+// Grab images, compress and move to /dist
+gulp.task('images', function() {
+  return gulp.src('src/images/**/*')
+    .pipe(cache(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true })))
+    .pipe(gulp.dest('dist/images'))
+    .pipe(notify({ message: 'Images task complete' }));
+});
 
-//  4. Live Serve
+
+//  5. Live Serve
 //  -------------
 var tinylr;
 
@@ -123,7 +136,7 @@ gulp.task('webserver', function() {
 gulp.task('serve', ['default', 'webserver', 'watch']);
 
 
-//  5. Watch Tasks
+//  6. Watch Tasks
 //  --------------
 gulp.task('watch', function () {
 
@@ -138,6 +151,6 @@ gulp.task('watch', function () {
 });
 
 
-//  6. Build Task
+//  7. Build Task
 //  --------------
-gulp.task('default', ['sass-dev', 'sass-dist', 'scripts', 'webserver', 'watch']);
+gulp.task('default', ['sass-dev', 'sass-dist', 'scripts', 'images', 'webserver', 'watch']);
