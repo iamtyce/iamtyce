@@ -8,6 +8,12 @@
   position: relative;
   color: #fff;
 
+  > * {
+    @include respond-to-max($screen-sm) {
+      display: none;
+    }
+  }
+
   &:after {
     content: "";
     display: block;
@@ -44,12 +50,6 @@
     @include respond-to($screen-md) {
       @include opacity(1);
     }
-  }
-}
-
-.feed__section--codepen {
-  @include respond-to-max($screen-sm) {
-    display: none;
   }
 }
 
@@ -152,6 +152,17 @@
     width: 100%;
     max-width: none;
 
+    //IE9
+    .ie9 & {
+      margin: 0 0 10px;
+    }
+  }
+}
+
+.feed__list--codepen-small {
+
+  > div {
+
     @include respond-to($screen-md) {
       width: 49.4%;
       margin: 0 0 10px;
@@ -160,7 +171,6 @@
     //IE9
     .ie9 & {
       max-width: 49.4%;
-      margin: 0 0 10px;
     }
   }
 }
