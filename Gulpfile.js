@@ -1,77 +1,143 @@
-/*!
- * gulp
- * $ npm install gulp-ruby-sass gulp-autoprefixer gulp-cssnano gulp-jshint gulp-concat gulp-uglify gulp-imagemin gulp-notify gulp-rename gulp-livereload gulp-cache del --save-dev
- */
+//  This is used to automate the minification
+//  of stylesheets and javascript files. Run using either
+//  'gulp', 'gulp watch' or 'gulp serve' from a command line terminal.
+//
+//  Contents
+//  --------
+//    1. Includes and Requirements
+//    2. SASS Automation
+//    3. JS Automation
+//    4. Live Serve
+//    5. Watch Tasks
+//    6. Build Task
 
-// Load plugins
-var gulp = require('gulp'),
-    sass = require('gulp-sass'),
-    autoprefixer = require('gulp-autoprefixer'),
-    cssnano = require('gulp-cssnano'),
-    uglify = require('gulp-uglify'),
-    imagemin = require('gulp-imagemin'),
-    rename = require('gulp-rename'),
-    concat = require('gulp-concat'),
-    notify = require('gulp-notify'),
-    cache = require('gulp-cache'),
-    livereload = require('gulp-livereload'),
-    del = require('del');
+'use strict';
 
-// Styles
-gulp.task('styles', function() {
-  return sass('src/styles/main.scss', { style: 'expanded' })
-    .pipe(autoprefixer('last 2 version'))
-    .pipe(gulp.dest('dist/styles'))
+//
+//  1. Includes and Requirements
+//  ----------------------------
+//  Set the plugin requirements
+//  for Gulp to function correctly.
+var gulp              = require('gulp'),
+    sass              = require('gulp-sass'),
+    autoprefixer      = require('gulp-autoprefixer'),
+    cssnano           = require('gulp-cssnano'),
+    clean             = require('gulp-clean'),
+    stripCssComments  = require('gulp-strip-css-comments'),
+    sourcemaps        = require('gulp-sourcemaps'),
+    rename            = require('gulp-rename'),
+    notify            = require("gulp-notify"),
+    concat            = require('gulp-concat'),
+    stripDebug        = require('gulp-strip-debug'),
+    uglify            = require('gulp-uglify'),
+    streamqueue       = require('streamqueue'),
+    //scssLint          = require('gulp-scss-lint'),
+    webserver         = require('gulp-webserver'),
+
+
+
+//  Set the default folder structure
+//  variables
+    styleSheets     = 'src/styles/',
+    styleSheetsDist = 'dist/css/',
+    appDir          = '';
+
+
+//  2. SASS Automation
+//  ------------------
+//  Includes the minification of SASS
+//  stylesheets. Output will be compressed.
+gulp.task('sass-dev', function () {
+  gulp.src(styleSheets + 'main.scss', { style: 'expanded' })
+    .pipe(sourcemaps.init())
+    .pipe(sass({ style: 'expanded' }))
+    .on("error", notify.onError(function (error) { return error.message; }))
+    .pipe(autoprefixer())
+    .pipe(sourcemaps.write('./'))
+    .pipe(gulp.dest(styleSheetsDist))
+    .pipe(notify({ message: 'Dev styles successfully built' }));
+});
+
+
+gulp.task('sass-dist', function () {
+  gulp.src(styleSheets + 'main.scss', { style: 'expanded' })
+    .pipe(sass({ style: 'expanded' }))
+    .on("error", notify.onError(function (error) { return error.message; }))
+    .pipe(autoprefixer())
+    .pipe(stripCssComments())
     .pipe(rename({ suffix: '.min' }))
     .pipe(cssnano())
-    .pipe(gulp.dest('dist/styles'))
-    .pipe(notify({ message: 'Styles task complete' }));
+    .pipe(gulp.dest(styleSheetsDist))
+    .pipe(notify({ message: 'Dist styles successfully built' }));
 });
 
-// Scripts
-// gulp.task('scripts', function() {
-//   return gulp.src('src/scripts/**/*.js')
-//     .pipe(jshint('.jshintrc'))
-//     .pipe(jshint.reporter('default'))
-//     .pipe(concat('main.js'))
-//     .pipe(gulp.dest('dist/scripts'))
-//     .pipe(rename({ suffix: '.min' }))
-//     .pipe(uglify())
-//     .pipe(gulp.dest('dist/scripts'))
-//     .pipe(notify({ message: 'Scripts task complete' }));
-// });
 
-// Images
-gulp.task('images', function() {
-  return gulp.src('src/images/**/*')
-    .pipe(cache(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true })))
-    .pipe(gulp.dest('dist/images'))
-    .pipe(notify({ message: 'Images task complete' }));
+// 3. JS Automation
+// -----------------
+// JS concat, strip debugging and minify
+gulp.task('scripts', function() {
+  return streamqueue({ objectMode: true },
+    gulp.src('src/js/**/*.js')
+  )
+  // .pipe(concat('scripts.js'))
+  .pipe(gulp.dest('dist/js/'))
+  .pipe(rename({ suffix: '.min' }))
+  .pipe(stripDebug())
+  .pipe(uglify())
+  .pipe(gulp.dest('dist/js/'))
+  .pipe(notify({ message: 'JavaScript successfully built' }));
 });
 
-// Clean
-gulp.task('clean', function() {
-  return del(['dist/styles', 'dist/scripts', 'dist/images']);
+
+
+//  4. Live Serve
+//  -------------
+var tinylr;
+
+gulp.task('livereload', function() {
+  tinylr = require('tiny-lr')();
+  tinylr.listen(35728);
 });
 
-// Default task
-gulp.task('default', ['clean'], function() {
-  gulp.start('styles', 'scripts', 'images');
+// var auspostStyles = require('auspost-styles');
+
+function notifyLiveReload(event) {
+  var fileName = require('path').relative(__dirname, event.path);
+}
+
+gulp.task('webserver', function() {
+  gulp.src(appDir)
+    .pipe(webserver({
+      port: 1337,
+      directoryListing: false,
+      livereload: {
+        enable: true,
+        port: 35738
+      },
+      fallback: 'index.html',
+      open: false
+    }));
 });
 
-// Watch
-gulp.task('watch', function() {
+//  Task to start the server, followed by watch
+gulp.task('serve', ['default', 'webserver', 'watch']);
 
-  // Watch .scss files
-  gulp.watch('src/styles/**/*.scss', ['styles']);
 
-  // Watch image files
-  gulp.watch('src/images/**/*', ['images']);
+//  5. Watch Tasks
+//  --------------
+gulp.task('watch', function () {
 
-  // Create LiveReload server
-  livereload.listen();
-
-  // Watch any files in dist/, reload on change
-  gulp.watch(['dist/**']).on('change', livereload.changed);
-
+  // Style Watch
+  gulp.watch([styleSheets + '**/*.scss'], ['sass-dev']);
+  
+  // JS Watch
+  gulp.watch(['src/js/**/*.js'], ['scripts']);
+  // HTML Watch
+  gulp.watch('*.html', notifyLiveReload);
+  gulp.watch(styleSheetsDist + '**/*.css', notifyLiveReload);
 });
+
+
+//  6. Build Task
+//  --------------
+gulp.task('default', ['sass-dev', 'sass-dist', 'scripts', 'webserver', 'watch']);
