@@ -1,12 +1,16 @@
-[![Build](https://img.shields.io/badge/build-passing-brightgreen.svg)]() [![Latest](https://img.shields.io/badge/latest-v4.0.0-orange.svg)]() [![Twitter](https://img.shields.io/badge/twitter-%40iamtyce-blue.svg)](https://twitter.com/iamtyce)
+[![Build](https://img.shields.io/badge/build-passing-brightgreen.svg)]() [![Latest](https://img.shields.io/badge/latest-v4.0.0-brightgreen.svg)]() [![Twitter](https://img.shields.io/badge/twitter-%40iamtyce-blue.svg)](https://twitter.com/iamtyce)
 
 **Got a question?** Hit me up on Twitter at [@iamtyce](https://twitter.com/iamtyce)
 
 # Introduction
 
-This is **v4** of my personal portfolio, I Am Tyce.
+This is v4 of my personal portfolio, **I Am Tyce**.
 
 You can see the compiled single page site at [iamtyce.com](http://www.iamtyce.com).
+
+# Why Github?
+
+Hosting my portfolio on Github Pages made sense to keep things lean, simple and transparent. Thanks to this I'm able to open source the way I've built this single page site and hopefully gain insights from my peers on better ways to develop.
 
 # License
 
