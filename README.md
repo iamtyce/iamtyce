@@ -2,11 +2,12 @@
 
 **Got a question?** Hit me up on Twitter at [@iamtyce](https://twitter.com/iamtyce)
 
+
+[![I Am Tyce](http://iamtyce.com/dist/images/iamtyce-horizontal-lrg-black.png)](http://www.iamtyce.com)
+
 # Introduction
 
-This is v4 of my personal portfolio, **I Am Tyce**.
-
-You can see the compiled single page site at [iamtyce.com](http://www.iamtyce.com).
+This is v4 of my personal portfolio, **I Am Tyce**. Visit the compiled single page site at [iamtyce.com](http://www.iamtyce.com).
 
 # Why Github?
 
