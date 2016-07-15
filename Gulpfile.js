@@ -141,7 +141,7 @@ gulp.task('serve', ['default', 'webserver', 'watch']);
 gulp.task('watch', function () {
 
   // Style Watch
-  gulp.watch([styleSheets + '**/*.scss'], ['sass-dev']);
+  gulp.watch([styleSheets + '**/*.scss'], ['sass-dev', 'sass-dist']);
   
   // JS Watch
   gulp.watch(['src/js/**/*.js'], ['scripts']);
@@ -153,4 +153,4 @@ gulp.task('watch', function () {
 
 //  7. Build Task
 //  --------------
-gulp.task('default', ['sass-dev', 'sass-dist', 'scripts', 'images', 'webserver', 'watch']);
+gulp.task('default', ['sass-dev', 'sass-dist', 'scripts', 'webserver', 'watch']);

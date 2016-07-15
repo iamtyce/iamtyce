@@ -119,23 +119,7 @@
   font-style: italic;
 }
 
-.work__block__link {
-  @include transition (color .2s, border .2s);
-
-  margin: 10px 0 0;
-  padding: 10px 25px;
-  display: inline-block;
-  text-transform: uppercase;
-  font-size: 2em;
-  color: $gray;
-  border: 2px solid $gray;
-
-  &:hover {
-    color: $primary-color;
-    border-color: $primary-color;
-    text-decoration: none;
-  }
-}
+.work__block__link {}
 
 .work__block__link__icon {
   margin-left: 2px;

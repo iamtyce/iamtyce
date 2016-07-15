@@ -26,7 +26,7 @@
 
     <link rel="stylesheet" href="dist/css/main.min.css">
 
-    <script src="src/js/modernizr.js"></script>
+    <script src="dist/js/modernizr.min.js"></script>
 
     <!--[if lt IE 9]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -46,10 +46,10 @@
 
       <nav role="navigation" class="nav-primary">
         <ul class="nav-primary__list">
-          <li class="nav-primary__list__item"><a href="#why" class="nav-primary__list__item__link">1. Why</a></li>
-          <li class="nav-primary__list__item"><a href="#friends" class="nav-primary__list__item__link">2. Friends</a></li>
-          <li class="nav-primary__list__item"><a href="#work" class="nav-primary__list__item__link">3. Work</a></li>
-          <li class="nav-primary__list__item"><a href="#feed" class="nav-primary__list__item__link">4. Feed</a></li>
+          <li class="nav-primary__list__item"><a href="#friends" class="nav-primary__list__item__link">1. Friends</a></li>
+          <li class="nav-primary__list__item"><a href="#work" class="nav-primary__list__item__link">2. Work</a></li>
+          <li class="nav-primary__list__item"><a href="#speaking" class="nav-primary__list__item__link">3. Speaking</a></li>
+          <li class="nav-primary__list__item"><a href="#demos" class="nav-primary__list__item__link">6. Demos</a></li>
           <li class="nav-primary__list__item"><a href="#future" class="nav-primary__list__item__link">5. Future</a></li>
           <li class="nav-primary__list__item"><a href="#contact" class="nav-primary__list__item__link">6. Contact</a></li>
         </ul>
@@ -77,7 +77,7 @@
 
       <div class="container">
 
-        <h4>1.</h4>
+        <h4>0.</h4>
         
         <h1>So what exactly do I do?</h1>
 
@@ -100,13 +100,13 @@
     </section>
 
 
-    <!-- 2. Friends -->
+    <!-- 1. Friends -->
 
     <section class="portfolio-section friends" id="friends">
 
       <div class="container">
 
-        <h4>2.</h4>
+        <h4>1.</h4>
         
         <h1>People I've been lucky enough to work with</h1>
         <a href="http://www.ibm.com/" class="friends__link"><img src="dist/images/logos/ibm.png" alt="IBM" title="IBM" class="friends__link__logo"></a>
@@ -210,11 +210,11 @@
     </section>
 
 
-    <!-- Work -->
+    <!-- 2. Work -->
 
     <section class="portfolio-section work" id="work">
 
-      <h4>3.</h4>
+      <h4>2.</h4>
       
       <h1>Work</h1>
 
@@ -239,9 +239,9 @@
           <div class="work__block__column work__block__column--rhs work__block__column--text">
             <h2 class="work__block__title">CSS3, HTML5, Responsive &amp; EDM</h2>
             <span class="work__block__icons"><i class="fa fa-desktop"></i> <i class="fa fa-tablet"></i> <i class="fa fa-mobile"></i></span>
-            <p class="work__block__copy">As co-founder and CTO my role in StageLabel focuses on designing and developing the UI for <a href="https://www.stagelabel.com/" target="_blank" title="StageLabel" class="work__block__copy__link">stagelabel.com</a>, cultivating a clean and minimal brand alongside our lead designer and working with our lead backend developer to integrate frontend technology with our AngularJS / Rails backend.</p>
-            <p class="work__block__copy">I also build and deliver responsive email marketing templates for StageLabel and help facilitate extensive user testing to ensure we continue to delivery a product our users are interested in returning to daily.</p>
-            <a href="https://www.stagelabel.com/" target="_blank" title="StageLabel" class="work__block__link">Visit Website</a>
+            <p class="work__block__copy">As co-founder and CTO my role in StageLabel focused on designing and developing the UI for <a href="https://www.stagelabel.com/" target="_blank" title="StageLabel" class="work__block__copy__link">stagelabel.com</a>, cultivating a clean and minimal brand alongside our lead designer and working with our lead backend developer to integrate frontend technology with our AngularJS / Rails backend.</p>
+            <p class="work__block__copy">I also built and delivered responsive email marketing templates for StageLabel and helped facilitate extensive user testing to ensure we continued to delivery a product our users are interested in returning to daily.</p>
+            <a href="https://www.stagelabel.com/" target="_blank" title="StageLabel" class="secondary-button work__block__link">Visit Website</a>
           </div>
 
         </div>
@@ -267,7 +267,7 @@
             <span class="work__block__icons"><i class="fa fa-desktop"></i> <i class="fa fa-tablet"></i> <i class="fa fa-mobile"></i></span>
             <p class="work__block__copy">I was invited by Keepers to help develop a new UI for their brand relaunch. The vision for the frontend build included advanced animation triggering, a responsive fullscreen interface, SVG scalable imagery, custom fonts, backwards compatibility to IE8 and more.</p>
             <p class="work__block__byline">All work for Keepers.com.au belongs to and is wholly copyrighted by Keepers.<br />I highly recommend checking them out if you're looking for killer design, development, strategy, UX and more.</p>
-            <a href="http://www.keepers.com.au/" target="_blank" title="Keepers" class="work__block__link">Visit Website</a>
+            <a href="http://www.keepers.com.au/" target="_blank" title="Keepers" class="secondary-button work__block__link">Visit Website</a>
           </div>
           
           <div class="work__block__column work__block__column--rhs">
@@ -285,22 +285,54 @@
     </section>
 
 
-    <!-- Feed -->
+    <!-- 3. Speaking -->
 
-    <section class="portfolio-section feed" id="feed">
+    <section class="portfolio-section speaking" id="speaking">
 
       <div class="container">
 
-        <h4>4.</h4>
+        <h4>3.</h4>
+
+        <h1>Speaking</h1>
+
+        <span class="meta-location">
+          <i class="fa fa-map-marker"></i> <a href="http://wikitravel.org/en/Valpara%C3%ADso" target="_blank" title="View on WikiTravel" class="meta-location__link">Valparaíso, Chile</a>
+        </span>
+
+      </div>
+
+    </section>
+
+    <section class="portfolio-section speaking__block">
+      <div class="speaking__block__left">
+        <img src="dist/images/logos/melbcss-logotype.png" alt="MelbCSS" title="MelbCSS" class="speak__block__logo">
+        <p class="speaking__block__copy">In June 2016 I was asked to speak at <a href="http://www.meetup.com/MelbCSS/" target="_blank" title="MelbCSS on Meetup.com">MelbCSS</a> about the Node module I built at Australia Post to help deliver a living styleguide to distributed teams.</p>
+        <a href="https://www.youtube.com/watch?v=eqT7rEIev5g" target="_blank" title="Tyce Clee - Living styleguides at Australia Post" class="secondary-button">Watch On YouTube</a>
+      </div>
+      <div class="speaking__block__right">
+        <div class="speaking__block__video">
+          <iframe width="853" height="480" src="https://www.youtube-nocookie.com/embed/eqT7rEIev5g?rel=0&amp;showinfo=0&autohide=1" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- 6. Demos -->
+
+    <section class="portfolio-section feed" id="demos">
+
+      <div class="container">
+
+        <h4>6.</h4>
         
-        <h1>Feed</h1>
+        <h1>Demos</h1>
         
         <!-- CodePen -->
         <section class="feed__section feed__section--codepen">
 
           <h1 class="feed__section__title"><a href="http://codepen.io/iamtyce/" target="_blank" class="feed__section__title__link"><i class="fa fa-codepen"></i><span class="feed__section__title__name">CodePen</span></a></h1>
 
-          <div class="feed__list feed__list--codepen">
+          <!-- <div class="feed__list feed__list--codepen">
 
             <span data-height="268" data-theme-id="0" data-slug-hash="adLgZa" data-default-tab="result" data-user="iamtyce" class="feed__list__item codepen"></span>
             <span data-height="700" data-theme-id="0" data-slug-hash="mVLRBK" data-default-tab="result" data-user="iamtyce" class="feed__list__item codepen"></span>
@@ -314,7 +346,7 @@
             <span data-height="268" data-theme-id="0" data-slug-hash="jEXRox" data-default-tab="result" data-user="iamtyce" class="feed__list__item codepen"></span>
             <span data-height="268" data-theme-id="0" data-slug-hash="bjycn" data-default-tab="result" data-user="iamtyce" class="feed__list__item codepen"></span>
 
-          </div>
+          </div> -->
 
           <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
 
@@ -329,7 +361,7 @@
     </section>
 
 
-    <!-- Future -->
+    <!-- 5. Future -->
 
     <section class="portfolio-section future" id="future">
 
@@ -341,14 +373,13 @@
           <span class="future__companies__logo"><img src="dist/images/future/spotify.jpg" alt="Spotify" title="Spotify" class="future__companies__logo__image"></span>
           <span class="future__companies__logo"><img src="dist/images/future/square.jpg" alt="Square" title="Square" class="future__companies__logo__image"></span>
           <span class="future__companies__logo"><img src="dist/images/future/uber.jpg" alt="Uber" title="Uber" class="future__companies__logo__image"></span>
-          <span class="future__companies__logo"><img src="dist/images/future/firebox.jpg" alt="Firebox" title="Firebox" class="future__companies__logo__image"></span>
           <span class="future__companies__logo"><img src="dist/images/future/valve.jpg" alt="Valve" title="Valve" class="future__companies__logo__image"></span>
         </div>
 
     </section>
 
 
-    <!-- Contact -->
+    <!-- 6. Contact -->
 
     <footer class="footer" id="contact">
 

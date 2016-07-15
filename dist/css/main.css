@@ -211,34 +211,22 @@ textarea {
 
 .portfolio-section {
   display: -webkit-box;
-  display: -moz-box;
-  display: box;
   display: -webkit-flex;
-  display: -moz-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
-  box-orient: vertical;
+  -webkit-box-direction: normal;
   -webkit-flex-direction: column;
-  -moz-flex-direction: column;
-  flex-direction: column;
-  -ms-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
-  box-pack: center;
   -webkit-justify-content: center;
-  -moz-justify-content: center;
-  -ms-justify-content: center;
-  -o-justify-content: center;
-  justify-content: center;
-  -ms-flex-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
-  box-align: center;
   -webkit-align-items: center;
-  -moz-align-items: center;
-  -ms-align-items: center;
-  -o-align-items: center;
-  align-items: center;
-  -ms-flex-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100%;
   min-height: 100%;
   padding: 10%;
@@ -576,10 +564,10 @@ p {
 
 .future__companies {
   text-align: center;
-  max-width: 90%; }
+  max-width: 80%; }
   @media only screen and (min-width: 768px) {
     .future__companies {
-      max-width: none; } }
+      max-width: 60%; } }
 
 .future__companies__logo {
   opacity: 0.6;
@@ -640,6 +628,89 @@ p {
   @media only screen and (min-width: 768px) {
     .primary-button {
       font-size: 1.8em; } }
+
+.secondary-button {
+  -webkit-transition: color 0.2s, border 0.2s;
+  transition: color 0.2s, border 0.2s;
+  margin: 10px 0 0;
+  padding: 10px 25px;
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 2em;
+  color: #555;
+  border: 2px solid #555; }
+  .secondary-button:hover {
+    color: #FABE28;
+    border-color: #FABE28;
+    text-decoration: none; }
+
+.speaking {
+  background: #2e2e2e url("../images/bg/valpo.jpg") center center no-repeat;
+  background-size: cover;
+  color: #fff;
+  position: relative;
+  min-height: 0; }
+
+.speaking__block {
+  width: 100%;
+  min-height: 100vh;
+  text-align: center;
+  padding: 10%; }
+  @media only screen and (min-width: 992px) {
+    .speaking__block {
+      height: 80%;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: row;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      -webkit-box-pack: justify;
+      -webkit-justify-content: space-between;
+          -ms-flex-pack: justify;
+              justify-content: space-between; } }
+  .speaking__block a {
+    color: #000; }
+
+@media only screen and (min-width: 992px) {
+  .speaking__block__left {
+    width: 35%; } }
+
+@media only screen and (min-width: 992px) {
+  .speaking__block__right {
+    width: 60%; } }
+
+.speaking__block__copy {
+  font-size: 1.5em; }
+
+.speak__block__logo {
+  max-height: 90px; }
+
+.speaking__block__video {
+  width: 100%;
+  padding: 10%; }
+  @media only screen and (min-width: 992px) {
+    .speaking__block__video {
+      position: relative;
+      padding: 30px 0 56.25%;
+      height: 0;
+      overflow: hidden; } }
+
+.speaking__block__video iframe,
+.speaking__block__video object,
+.speaking__block__video embed {
+  width: 100%;
+  height: 100%; }
+  @media only screen and (min-width: 992px) {
+    .speaking__block__video iframe,
+    .speaking__block__video object,
+    .speaking__block__video embed {
+      position: absolute;
+      top: 0;
+      left: 0; } }
 
 .testimonials {
   width: 100%;
@@ -951,21 +1022,6 @@ p {
 .work__block__byline {
   font-size: 1.2em;
   font-style: italic; }
-
-.work__block__link {
-  -webkit-transition: color 0.2s, border 0.2s;
-  transition: color 0.2s, border 0.2s;
-  margin: 10px 0 0;
-  padding: 10px 25px;
-  display: inline-block;
-  text-transform: uppercase;
-  font-size: 2em;
-  color: #555;
-  border: 2px solid #555; }
-  .work__block__link:hover {
-    color: #FABE28;
-    border-color: #FABE28;
-    text-decoration: none; }
 
 .work__block__link__icon {
   margin-left: 2px;
