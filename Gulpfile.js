@@ -5,12 +5,11 @@
 //  Contents
 //  --------
 //    1. Includes and Requirements
-//    2. SASS Automation
+//    2. Sass Automation
 //    3. JS Automation
 //    4. Images
-//    5. Live Serve
-//    6. Watch Tasks
-//    7. Build Task
+//    5. Browsersync
+//    6. Build Task
 
 'use strict';
 
@@ -31,7 +30,9 @@ var gulp              = require('gulp'),
     concat            = require('gulp-concat'),
     stripDebug        = require('gulp-strip-debug'),
     uglify            = require('gulp-uglify'),
+    browserSync       = require('browser-sync').create(),
     streamqueue       = require('streamqueue'),
+    newer             = require('gulp-newer'),
     imagemin          = require('gulp-imagemin'),
     cache             = require('gulp-cache'),
     //scssLint          = require('gulp-scss-lint'),
@@ -43,6 +44,8 @@ var gulp              = require('gulp'),
 //  variables
     styleSheets     = 'src/styles/',
     styleSheetsDist = 'dist/css/',
+    imgSrc          = 'src/images/**',
+    imgDest         = 'dist/images',
     appDir          = '';
 
 
@@ -58,7 +61,8 @@ gulp.task('sass-dev', function () {
     .pipe(autoprefixer())
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest(styleSheetsDist))
-    .pipe(notify({ message: 'Dev styles successfully built' }));
+    .pipe(browserSync.stream())
+    // .pipe(notify({ message: 'Dev styles successfully built' }));
 });
 
 
@@ -71,7 +75,7 @@ gulp.task('sass-dist', function () {
     .pipe(rename({ suffix: '.min' }))
     .pipe(cssnano())
     .pipe(gulp.dest(styleSheetsDist))
-    .pipe(notify({ message: 'Dist styles successfully built' }));
+    // .pipe(notify({ message: 'Dist styles successfully built' }));
 });
 
 
@@ -96,61 +100,39 @@ gulp.task('scripts', function() {
 //  -------------
 // Grab images, compress and move to /dist
 gulp.task('images', function() {
-  return gulp.src('src/images/**/*')
-    .pipe(cache(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true })))
-    .pipe(gulp.dest('dist/images'))
+  // Add the newer pipe to pass through newer images only 
+  return gulp.src(imgSrc)
+    .pipe(newer(imgDest))
+    // .pipe(imagemin())
+    .pipe(cache(imagemin({ optimizationLevel: 5, progressive: true, interlaced: true })))
+    .pipe(gulp.dest(imgDest))
     .pipe(notify({ message: 'Images task complete' }));
+
+  // return gulp.src('src/images/**/*')
+  //   .pipe(cache(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true })))
+  //   .pipe(gulp.dest('dist/images'))
+  //   .pipe(notify({ message: 'Images task complete' }));
 });
 
 
-//  5. Live Serve
-//  -------------
-var tinylr;
-
-gulp.task('livereload', function() {
-  tinylr = require('tiny-lr')();
-  tinylr.listen(35728);
-});
-
-// var auspostStyles = require('auspost-styles');
-
-function notifyLiveReload(event) {
-  var fileName = require('path').relative(__dirname, event.path);
-}
-
-gulp.task('webserver', function() {
-  gulp.src(appDir)
-    .pipe(webserver({
-      port: 1337,
-      directoryListing: false,
-      livereload: {
-        enable: true,
-        port: 35738
-      },
-      fallback: 'index.html',
-      open: false
-    }));
-});
-
-//  Task to start the server, followed by watch
-gulp.task('serve', ['default', 'webserver', 'watch']);
-
-
-//  6. Watch Tasks
+//  5. Browsersync
 //  --------------
-gulp.task('watch', function () {
+// Static Server + watching scss/html files
+gulp.task('browserSync', ['sass-dev', 'sass-dist'], function() {
 
-  // Style Watch
+  browserSync.init({
+      server: "./",
+      open: false,
+      https: false
+  });
+
   gulp.watch([styleSheets + '**/*.scss'], ['sass-dev', 'sass-dist']);
-  
-  // JS Watch
   gulp.watch(['src/js/**/*.js'], ['scripts']);
-  // HTML Watch
-  gulp.watch('*.html', notifyLiveReload);
-  gulp.watch(styleSheetsDist + '**/*.css', notifyLiveReload);
+  gulp.watch(['src/images/**'], ['images']);
+  gulp.watch("*.html").on('change', browserSync.reload);
 });
 
 
 //  7. Build Task
 //  --------------
-gulp.task('default', ['sass-dev', 'sass-dist', 'scripts', 'webserver', 'watch']);
+gulp.task('default', ['sass-dev', 'sass-dist', 'scripts', 'images', 'browserSync']);
