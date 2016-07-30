@@ -1028,8 +1028,9 @@ p {
 .work__block__image {
   max-width: 100%; }
 
-.work__block__image--auspost {
-  margin-top: 100px; }
+@media only screen and (min-width: 1200px) {
+  .work__block__image--auspost {
+    margin-top: 100px; } }
 
 .work__block__image--full-width {
   width: 100%; }
