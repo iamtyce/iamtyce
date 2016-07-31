@@ -1000,7 +1000,7 @@ p {
 .work__block__image {
   max-width: 100%; }
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 992px) {
   .work__block__image--auspost {
     margin-top: 100px; } }
 

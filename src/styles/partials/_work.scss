@@ -132,7 +132,7 @@
 }
 
 .work__block__image--auspost {
-  @include respond-to($screen-lg) {
+  @include respond-to($screen-md) {
     margin-top: 100px;
   }
 }
