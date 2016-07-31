@@ -81,7 +81,7 @@
 
     <link rel="stylesheet" href="dist/css/main.min.css">
 
-    <script src="dist/js/modernizr.min.js"></script>
+    <script src="dist/js/vendor/modernizr.min.js"></script>
 
     <!--[if lt IE 9]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -337,7 +337,11 @@
 
         <img src="dist/images/work/stagelabel-mockup-3.jpg" alt="StageLabel" class="work__block__image">
 
-        <img src="dist/images/work/stagelabel-mockup-5.jpg" alt="StageLabel" class="work__block__image">
+        ​<picture>
+          <source srcset="dist/images/work/stagelabel-mockup-5-sm.jpg" media="(max-width: 479px)">
+          <source srcset="dist/images/work/stagelabel-mockup-5.jpg" media="(min-width: 480px)">
+          <img src="dist/images/work/stagelabel-mockup-5.jpg" alt="StageLabel" class="work__block__image">
+        </picture>
 
     </section>
 
@@ -367,7 +371,6 @@
           <img src="dist/images/work/keepers-recording-alt.gif" alt="Keepers" class="work__block__keepers-laptop__animation">
           <img src="dist/images/work/keepers-mockup-1.jpg" alt="Keepers" class="work__block__keepers-laptop__bg">
         </div>
-
 
     </section>
 
@@ -630,8 +633,8 @@
 
     </footer>
 
-    <!-- Jribbble v1.0.0 -->
-    <!-- <script src="assets/js/jribbble-no-dep-1.0.0.js"></script> -->
+    <!-- Picturefill 3.0.2 [ https://github.com/scottjehl/picturefill ]-->
+    <script src="dist/js/vendor/picturefill.min.js"></script>
 
     <!-- Site scripts -->
     <!-- <script src="assets/js/scripts.js"></script> -->

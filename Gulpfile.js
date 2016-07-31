@@ -128,7 +128,7 @@ gulp.task('browserSync', ['sass-dev', 'sass-dist'], function() {
 
   gulp.watch([styleSheets + '**/*.scss'], ['sass-dev', 'sass-dist']);
   gulp.watch(['src/js/**/*.js'], ['scripts']);
-  gulp.watch(['src/images/**'], ['images']);
+  gulp.watch(['src/images/**'], ['images'], browserSync.reload);
   gulp.watch("*.html").on('change', browserSync.reload);
 });
 
