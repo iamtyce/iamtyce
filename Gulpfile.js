@@ -103,15 +103,9 @@ gulp.task('images', function() {
   // Add the newer pipe to pass through newer images only 
   return gulp.src(imgSrc)
     .pipe(newer(imgDest))
-    // .pipe(imagemin())
     .pipe(cache(imagemin({ optimizationLevel: 5, progressive: true, interlaced: true })))
     .pipe(gulp.dest(imgDest))
     .pipe(notify({ message: 'Images task complete' }));
-
-  // return gulp.src('src/images/**/*')
-  //   .pipe(cache(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true })))
-  //   .pipe(gulp.dest('dist/images'))
-  //   .pipe(notify({ message: 'Images task complete' }));
 });
 
 
