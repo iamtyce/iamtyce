@@ -24,8 +24,6 @@
 }
 
 .intro__byline {
-  @include opacity(.6);
-
   margin: 70px 0 0;
   font-weight: 400;
   color: #fff;
@@ -33,6 +31,12 @@
   line-height: 1em;
   text-shadow: 0 0 10px rgba(0,0,0,.7);
   text-transform: uppercase;
+
+  opacity: 0;
+  transition: opacity 1s;
+
+  // Typekit (loaded)
+  .wf-active & { opacity: 0.6; }
 
   //IE9
   .ie9 & {
@@ -52,6 +56,15 @@
   color: #fff;
   text-shadow: 0 0 5px rgba(0,0,0,.7);
 
+  opacity: 0;
+  transition: opacity 1s;
+
+  // Typekit (loaded)
+  .wf-active & {
+    opacity: 1;
+    transition-delay: 0.2s;
+  }
+
   //IE9
   .ie9 & {
     display: block;
@@ -61,6 +74,19 @@
     font-size: 9em;
   }
 }
+
+.intro__button {
+  opacity: 0;
+  transition: opacity 1s;
+
+  // Typekit (loaded)
+  .wf-active & {
+    opacity: 1;
+    transition-delay: 0.4s;
+  }
+}
+
+// Friends
 
 .friends {
   // background: #2e2e2e;

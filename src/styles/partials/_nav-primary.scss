@@ -5,14 +5,23 @@
 .nav-primary {}
 
 .nav-primary__list {
-  @include display(flex);
-  @include flex-direction(row);
-  @include justify-content(space-between);
-  @include flex-wrap(wrap);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
 
   margin: 20px auto 0;
   padding: 0;
   list-style-type: none;
+
+  opacity: 0;
+  transition: opacity 1s;
+
+  // Typekit (loaded)
+  .wf-active & {
+    opacity: 1;
+    transition-delay: 1s;
+  }
 
   //IE9
   .ie9 & {
@@ -21,9 +30,8 @@
   }
 
   @include respond-to($screen-sm) {
-    @include flex-wrap(nowrap);
-
     width: 80%;
+    flex-wrap: nowrap;
   }
 
   @include respond-to($screen-md) {
@@ -33,8 +41,8 @@
 }
 
 .nav-primary__list__item {  
-  @include opacity(.4);
-  @include transition(opacity .2s);
+  opacity: 0.4;
+  transition: opacity .2s;
 
   //IE9
   .ie9 & {
@@ -52,7 +60,7 @@
   text-align: center;
 
   &:hover {
-    @include opacity(1);
+    opacity: 1;
   }
 
   @include respond-to($screen-sm) {
@@ -68,5 +76,6 @@
 
   &:hover {
     text-decoration: none;
+    color: #fff;
   }
 }
