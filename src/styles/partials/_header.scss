@@ -3,8 +3,8 @@
 // --------------------------------------------------
 
 .header {
-  @include opacity(.4);
-  @include transition(opacity .2s);
+  opacity: .4;
+  transition: opacity .2s;
 
   width: 100%;
   padding: 30px;
@@ -12,19 +12,19 @@
   top: 0;
 
   @include respond-to($screen-md) {
-    @include display(flex);
-    @include flex-direction(row);
-    @include justify-content(space-between);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
   }
 
   &:hover {
-    @include opacity(1);
+    opacity: 1;
   }
 }
 
 .header__logo {  
-  @include opacity(.4);
-  @include transition(opacity .2s);
+  opacity: .4;
+  transition: opacity .2s;
   
   margin: 0 auto;
   max-height: 25px;
@@ -37,7 +37,7 @@
   }
 
   &:hover {
-    @include opacity(1);
+    opacity: 1;
   }
 
   @include respond-to($screen-md) {

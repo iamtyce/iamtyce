@@ -30,7 +30,7 @@
 }
 
 .slider__inner__overflow {
-  @include transition(all ease-in-out .3s);
+  transition: all ease-in-out .3s;
   
   width: $slideWrapperWidth;
   height: 100%;
@@ -50,10 +50,10 @@
 // Testimonials
 
 .testimonial {
-  @include display(flex);
-  @include flex-direction(column);
-  @include justify-content(center);
-  @include align-items(center);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   
   padding: 1% 20px;
   font-size: 1.3em;
@@ -134,7 +134,7 @@
 }
 
 .slideControl {
-  @include opacity(.3);
+  opacity: .3;
 
   padding: 8px;
   background: $primary-color;
@@ -147,7 +147,7 @@
   display: inline-block;
   
   &:hover{
-    @include opacity(1);
+    opacity: 1;
   }
 
   @include respond-to($screen-sm) {

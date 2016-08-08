@@ -35,13 +35,13 @@
 }
 
 .work__block__wrapper {
-  @include display(flex);
-  @include flex-direction(column);
-  @include justify-content(center);
-  @include align-items(center);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
   @include respond-to($screen-md) {
-    @include flex-direction(row);
+    flex-direction: row;
   }
 }
 

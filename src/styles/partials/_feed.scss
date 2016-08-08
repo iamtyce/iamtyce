@@ -35,20 +35,20 @@
   margin: 80px 0;
 
   @include respond-to($screen-md) {
-    @include opacity(.6);
-    @include transition(opacity .2s);
+    opacity: .6;
+    transition: opacity .2s;
 
     margin: 150px 0 0;
   }
 
   //IE9
   .ie9 & {
-    @include opacity(1);
+    opacity: 1;
   }
 
   &:hover {
     @include respond-to($screen-md) {
-      @include opacity(1);
+      opacity: 1;
     }
   }
 }
@@ -61,7 +61,7 @@
 }
 
 .feed__section__title__link {
-  @include transition(color .2s);
+  transition: color .2s;
 
   color: #fff;
 
@@ -81,10 +81,10 @@
 }
 
 .feed__list {
-  @include display(flex);
-  @include flex-direction(column);
-  @include justify-content(space-between);
-  @include align-items(center);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 
   margin: 0;
   padding: 0;
@@ -98,13 +98,13 @@
   }
 
   @include respond-to($screen-md) {
-    @include flex-direction(row);
+    flex-direction: row;
   }
 }
 
 .feed__list__item,
 .feed__list--codepen > div {
-  @include transition(border .2s);
+  transition: border .2s;
 
   max-width: 96%;
   margin-bottom: 40px;
@@ -142,7 +142,7 @@
 // CodePen
 
 .feed__list--codepen {
-  @include flex-wrap(wrap);
+  flex-wrap: wrap;
 
   iframe {
     display: block;
