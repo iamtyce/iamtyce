@@ -67,7 +67,6 @@ textarea {
   }
 }
 
-
 // Links
 
 a {
@@ -82,6 +81,12 @@ a {
 
   &:focus {
     @include tab-focus();
+  }
+
+  // Muted, alternate href colour
+
+  &.link-muted {
+    color: #000;
   }
 }
 
