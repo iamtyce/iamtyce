@@ -1,10 +1,13 @@
+[![Build](https://img.shields.io/badge/build-passing-brightgreen.svg)]() [![Latest](https://img.shields.io/badge/latest-v4.0.0-brightgreen.svg)]() [![Twitter](https://img.shields.io/badge/twitter-%40iamtyce-blue.svg)](https://twitter.com/iamtyce)
+
 **Got a question?** Hit me up on Twitter at [@iamtyce](https://twitter.com/iamtyce)
+
 
 [![I Am Tyce](http://iamtyce.com/dist/images/iamtyce-horizontal-lrg-black.png)](http://www.iamtyce.com)
 
 # Introduction
 
-This is v5 of my personal portfolio, **I Am Tyce**. Visit the compiled single page site at [iamtyce.com](http://www.iamtyce.com).
+This is v4 of my personal portfolio, **I Am Tyce**. Visit the compiled single page site at [iamtyce.com](http://www.iamtyce.com).
 
 # Why Github?
 
@@ -14,7 +17,7 @@ Hosting my portfolio on Github Pages made sense to keep things lean, simple and 
 
 The MIT License (MIT)
 
-Copyright (c) 2007-2019 Tyce Clee
+Copyright (c) 2007-2016 Tyce Clee
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
