@@ -1,7 +1,7 @@
 {
   "name": "iamtyce",
   "version": "5.0.0",
-  "homepage": "http://iamtyce.com/",
+  "homepage": "https://iamtyce.com/",
   "private": true,
   "dependencies": {
     "gh-pages": "^2.1.1",

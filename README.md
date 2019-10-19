@@ -1,6 +1,6 @@
-**Got a question?** Hit me up on Twitter at [@iamtyce](https://twitter.com/iamtyce)
+[![I Am Tyce](/public/iamtyce-horizontal-lrg-black.png)](http://www.iamtyce.com)
 
-[![I Am Tyce](http://iamtyce.com/dist/images/iamtyce-horizontal-lrg-black.png)](http://www.iamtyce.com)
+**Got a question?** Hit me up on Twitter at [@iamtyce](https://twitter.com/iamtyce)
 
 # Introduction
 
