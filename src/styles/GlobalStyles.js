@@ -25,10 +25,6 @@ export const GlobalStyles = createGlobalStyle`
 	h2 {
 		font-size: 48px;
 		font-weight: 400;
-		font-style: italic;
-		font-family: mr-eaves-sans, -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-			"Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-			sans-serif;
 	}
 
 	code {

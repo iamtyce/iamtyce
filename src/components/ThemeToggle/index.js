@@ -7,7 +7,7 @@ export const ThemeToggle = styled.button`
   width: 52px;
   height: 52px;
   font-size: 40px;
-  border: 2px solid transparent;
+  border: 4px double transparent;
   border-radius: 500px;
   display: flex;
   align-items: center;
@@ -17,6 +17,9 @@ export const ThemeToggle = styled.button`
   right: 16px;
   opacity: 0.3;
   transition: 200ms opacity;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
 
   &:hover,
   &:active {

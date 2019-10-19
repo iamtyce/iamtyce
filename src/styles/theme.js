@@ -1,17 +1,17 @@
 export const lightTheme = {
   colors: {
-    background: "#ECEFF4",
-    textColor: "#2E3440",
-    buttonBorderColor: "#2E3440",
-    footerLinkColor: "#2E3440"
+    background: "#f0f2f0",
+    textColor: "#3a453a",
+    buttonBorderColor: "#a6a9a6",
+    footerLinkColor: "#a6a9a6"
   }
 };
 
 export const darkTheme = {
   colors: {
-    background: "#000",
-    textColor: "#ECEFF4",
-    buttonBorderColor: "#ECEFF4",
-    footerLinkColor: "#ECEFF4"
+    background: "#151616",
+    textColor: "#dae2dc",
+    buttonBorderColor: "#656766",
+    footerLinkColor: "#656766"
   }
 };
