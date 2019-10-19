@@ -19,12 +19,14 @@ export const GlobalStyles = createGlobalStyle`
 	}
 
 	h1 {
-		font-size: 64px;
+		font-size: 9vmin;
+		max-width: 1000px;
 	}
 
 	h2 {
-		font-size: 48px;
 		font-weight: 400;
+		font-size: 5vmin;
+		max-width: 1000px;
 	}
 
 	code {

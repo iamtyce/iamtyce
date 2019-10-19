@@ -37,9 +37,6 @@ const App = () => {
               I’m currently a design systems tech lead with Spotify, focusing on
               accessibility and inclusive design.
             </h2>
-            <ThemeToggle onClick={toggleTheme}>
-              {theme === "light" ? "☀️" : "🌚"}
-            </ThemeToggle>
           </hgroup>
         </header>
         <Footer>
@@ -73,6 +70,9 @@ const App = () => {
             </FooterListItem>
           </FooterList>
         </Footer>
+        <ThemeToggle onClick={toggleTheme}>
+          {theme === "light" ? "☀️" : "🌚"}
+        </ThemeToggle>
       </Container>
     </ThemeProvider>
   );

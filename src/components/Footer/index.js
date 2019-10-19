@@ -6,9 +6,15 @@ export const Footer = styled.footer`
   font-family: mr-eaves-sans, -apple-system, BlinkMacSystemFont, "Segoe UI",
     "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
     "Helvetica Neue", sans-serif;
+
+  @media (max-width: 575.98px) {
+    margin-bottom: 48px;
+  }
 `;
 
 export const FooterList = styled.ul`
+  padding-left: 0;
+  margin-bottom: 0;
   display: flex;
   align-items: center;
   justify-content: center;
