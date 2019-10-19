@@ -11,6 +11,7 @@ import {
 } from "../Footer";
 import { Logo } from "../Logo";
 import { ThemeToggle } from "../ThemeToggle";
+import { Strikethrough } from "../Strikethrough";
 import { lightTheme, darkTheme } from "../../styles/theme";
 import logoLight from "../../iamtyce-lrg-black.png";
 import logoDark from "../../iamtyce-lrg.png";
@@ -29,11 +30,11 @@ const App = () => {
         <header>
           <hgroup>
             <h1>
-              Hej! I am Tyce Clee, a web engineer from sunny Australia based in{" "}
-              <strike>sunny</strike> New York.
+              Hej! I’m Tyce Clee, a web engineer from sunny Australia based in{" "}
+              <Strikethrough>sunny</Strikethrough> New York.
             </h1>
             <h2>
-              I'm currently a design systems tech lead with Spotify, focusing on
+              I’m currently a design systems tech lead with Spotify, focusing on
               accessibility and inclusive design.
             </h2>
             <ThemeToggle onClick={toggleTheme}>
