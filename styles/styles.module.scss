@@ -4,17 +4,48 @@ $background-color: #000;
 $max-column-width: 70%;
 $global-padding: 24px;
 
+// Mixins
+
+$screen-sm-min: 576px;
+$screen-md-min: 768px;
+$screen-lg-min: 992px;
+$screen-xl-min: 1200px;
+
+@mixin sm {
+  @media (min-width: #{$screen-sm-min}) {
+      @content;
+  }
+}
+@mixin md {
+  @media (min-width: #{$screen-md-min}) {
+      @content;
+  }
+}
+@mixin lg {
+  @media (min-width: #{$screen-lg-min}) {
+      @content;
+  }
+}
+@mixin xl {
+  @media (min-width: #{$screen-xl-min}) {
+      @content;
+  }
+}
+
 // Navigation
 .nav {
-  display: flex;
-  justify-content: space-between;
-  max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
   padding: $global-padding;
   position: sticky;
   top: 0;
   background-color: $background-color;
+
+  @include sm {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+  }
 }
 
 .nav__title {
@@ -26,14 +57,24 @@ $global-padding: 24px;
   display: flex;
   margin-top: 0;
   margin-bottom: 0;
+  margin-left: -8px;
   padding-left: 0;
   list-style-type: none;
+  align-items: center;
 
-  &__item {
+  @include sm {
+    margin-right: -8px;
   }
 
   &__link {
     padding: 4px 8px;
+  }
+
+  &__icon {
+    padding-left: 8px;
+    padding-right: 8px;
+    display: flex;
+    justify-content: center;
   }
 }
 
@@ -91,9 +132,12 @@ $global-padding: 24px;
 // Two Up (Grid)
 
 .twoup {
-  display: grid;
-  grid-template-columns: 40% 60%;
   padding-bottom: 150px;
+  
+  @include sm {
+    display: grid;
+    grid-template-columns: 40% 60%;
+  }
 }
 
 .twoup__content {

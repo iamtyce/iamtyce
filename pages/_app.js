@@ -1,4 +1,5 @@
 import { Domine } from 'next/font/google'
+import Image from 'next/image'
 import Link from 'next/link'
 import Iframe from 'react-iframe'
 import '../styles/global.css'
@@ -7,6 +8,8 @@ import Navbar from '../src/components/navbar'
 import Hero from '../src/components/hero'
 import mainHeroImage from '../src/images/tyce-2023.png';
 import secondaryHeroImage from '../src/images/tyce-1993.png';
+import IconLinkedIn from '../src/images/LinkedIn.png';
+import IconEmail from '../src/images/Email.png';
 
 const domine = Domine({ subsets: ['latin'] })
 
@@ -29,10 +32,14 @@ export default function MyApp() {
             <Link href="#contact" className={styles.nav__list__link}>Contact</Link>
           </li>
           <li className={styles.nav__list__item}>
-            <Link href="https://www.linkedin.com/in/iamtyce/" className={styles.nav__list__link}>LI</Link>
+            <Link href="https://www.linkedin.com/in/iamtyce/" className={styles.nav__list__icon}>
+              <Image src={IconLinkedIn} height="24" width="24" alt="LinkedIn" />
+            </Link>
           </li>
           <li className={styles.nav__list__item}>
-            <Link href="mailto:tyce@iamtyce.com" className={styles.nav__list__link}>EM</Link>
+            <Link href="mailto:tyce@iamtyce.com" className={styles.nav__list__icon}>
+            <Image src={IconEmail} height="24" width="24" alt="Email" />
+            </Link>
           </li>
         </ul>
       </Navbar>
@@ -45,7 +52,7 @@ export default function MyApp() {
             imageDetails="Melbourne, Australia — October 2023"
             headline="As a technical leader I’ve spent the last decade cultivating and building teams around design systems, artist and podcasting tools. I’ve paid particular attention to balancing strong delivery practices with cultural needs to create teams that love working on difficult problems and delivering ahead of schedule."
             byline="Thanks to relationships I form early and often with design and product partners I’ve built a reputation as someone that’s easy to work with and pushes for innovation and outside of the box thinking."
-            subline="At Spotify I co-founded and lead the Veterans@ diversity group to help foster an inclusive community for veterans and their supporters to enable increased education and understanding of the value of veterans in the workplace."
+            subline="I co-founded and lead the Veterans@Spotify diversity group to help foster an inclusive community for veterans and their supporters to enable increased education and understanding of the value of veterans in the workplace."
           />
 
           <div className={styles.twoup} id="articles">
