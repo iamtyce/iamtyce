@@ -13,6 +13,11 @@ import IconEmail from '../src/images/Email.png';
 
 const domine = Domine({ subsets: ['latin'] })
 
+export const metadata = {
+  title: 'Tyce Clee | Engineering Manager',
+  description: 'Technical leader based in Melbourne, Australia that has spent the last decade cultivating and building teams around design systems, artist and podcasting tools',
+}
+
 export default function MyApp() {
   return (
     <div className={domine.className} id="home">
