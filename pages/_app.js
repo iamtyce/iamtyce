@@ -37,7 +37,7 @@ export default function MyApp() {
             <Link href="#contact" className={styles.nav__list__link}>Contact</Link>
           </li>
           <li className={styles.nav__list__item}>
-            <Link href="https://www.linkedin.com/in/iamtyce/" className={styles.nav__list__icon}>
+            <Link href="https://www.linkedin.com/in/iamtyce/" target="_blank" className={styles.nav__list__icon}>
               <Image src={IconLinkedIn} height="24" width="24" alt="LinkedIn" />
             </Link>
           </li>
