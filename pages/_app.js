@@ -15,9 +15,9 @@ const domine = Domine({ subsets: ['latin'] })
 
 export default function MyApp() {
   return (
-    <div className={domine.className}>
+    <div className={domine.className} id="home">
       <Navbar className={styles.nav}>
-        <h2 className={styles.nav__title}>Tyce Clee</h2>
+        <h2 className={styles.nav__title}><Link href="#home">Tyce Clee</Link></h2>
         <ul className={styles.nav__list}>
           <li className={styles.nav__list__item}>
             <Link href="#articles" className={styles.nav__list__link}>Articles</Link>
@@ -44,7 +44,7 @@ export default function MyApp() {
         </ul>
       </Navbar>
       <main className={styles.container}>
-      <section>
+        <section>
           <h1 className={styles.intro}>Hi, I’m Tyce — an engineering leader focused on building incredibly performant and motivated teams with high levels of trust and creativity.</h1>
           <Hero
             imageSrc={mainHeroImage}
@@ -75,10 +75,10 @@ export default function MyApp() {
           <div className={styles.twoup} id="podcasts">
             <div className={styles.twoup__column}><h3 className={styles.twoup__title}>Podcasts</h3></div>
             <div className={styles.twoup__column}>
-              <Iframe src="https://open.spotify.com/embed/episode/3NkdXAdx5ZUXL0vAqImtey?utm_source=generator&theme=0&t=0" width="100%" height="352" frameBorder="0" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture" loading="lazy" />
+              <Iframe src="https://open.spotify.com/embed/episode/3NkdXAdx5ZUXL0vAqImtey?utm_source=generator&theme=0&t=0" width="100%" height="352" frameBorder="0" allow="clipboard-write; encrypted-media; picture-in-picture" loading="lazy" />
               <p className={styles.twoup__content_muted}>Smith Schwartz, Product Design Manager &amp; Tyce Clee, Engineering Manager at Spotify discuss their design system, Encore</p>
 
-              <Iframe src="https://open.spotify.com/embed/episode/55SbkMbwh1v1jNJTJXnhfH?utm_source=generator&theme=0&t=0" width="100%" height="152" frameBorder="0" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture" loading="lazy" />
+              <Iframe src="https://open.spotify.com/embed/episode/55SbkMbwh1v1jNJTJXnhfH?utm_source=generator&theme=0&t=0" width="100%" height="152" frameBorder="0" allow="clipboard-write; encrypted-media; picture-in-picture" loading="lazy" />
               <p className={styles.twoup__content_muted}>Each week, a game genie (Sam) a game weenie (Edwin) and a game junkie (Tyce) challenge each other to play and review a new mobile game.</p>
             </div>
           </div>
@@ -86,11 +86,11 @@ export default function MyApp() {
           <div className={styles.twoup} id="playlists">
             <div className={styles.twoup__column}><h3 className={styles.twoup__title}>Playlists</h3></div>
             <div className={styles.twoup__column}>
-             <Iframe src="https://open.spotify.com/embed/playlist/2h69GqMo8Gg20Ogv7QvPj0?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture" loading="lazy" />
+             <Iframe src="https://open.spotify.com/embed/playlist/2h69GqMo8Gg20Ogv7QvPj0?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allow="clipboard-write; encrypted-media; picture-in-picture" loading="lazy" />
               <p className={styles.twoup__content_muted}>新しいたわごと curated by Josh Mateo &amp; Tyce Clee</p>
-              <Iframe src="https://open.spotify.com/embed/playlist/1iRo9PjjloCQyLfB6sEx3e?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture" loading="lazy" />
+              <Iframe src="https://open.spotify.com/embed/playlist/1iRo9PjjloCQyLfB6sEx3e?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allow="clipboard-write; encrypted-media; picture-in-picture" loading="lazy" />
               <p className={styles.twoup__content_muted}>Zoned 34 curated by Engineering Managers Shaun Bent &amp; Tyce Clee</p>
-              <Iframe src="https://open.spotify.com/embed/playlist/2vSnrxq1ryXu0ll1DwOILA?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture" loading="lazy" />
+              <Iframe src="https://open.spotify.com/embed/playlist/2vSnrxq1ryXu0ll1DwOILA?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allow="clipboard-write; encrypted-media; picture-in-picture" loading="lazy" />
               <p className={styles.twoup__content_muted}>Zoned 7 curated by Engineering Managers Shaun Bent &amp; Tyce Clee</p>
             </div>
           </div>
