@@ -56,6 +56,7 @@ $screen-xl-min: 1200px;
 .nav__title {
   margin-top: 0;
   margin-bottom: 0;
+  font-weight: 700;
 }
 
 .nav__list {
@@ -80,10 +81,10 @@ $screen-xl-min: 1200px;
   }
 
   &__icon {
-
     @include max-sm {
       position: relative;
       top: 7px;
+      margin-left: 8px;
     }
    
     @include sm {
@@ -110,10 +111,9 @@ $screen-xl-min: 1200px;
   font-weight: 400;
 
   @include max-sm {
-    padding-top: 48px;
-    padding-bottom: 32px;
-    font-size: 36px;
-    line-height: 48px;
+    padding-top: 24px;
+    font-size: 30px;
+    line-height: 42px;
   }
 
   @include sm {
