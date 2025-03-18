@@ -51,7 +51,7 @@ export default function MyApp() {
         </Navbar>
         <main className={styles.container}>
           <section>
-            <h1 className={styles.intro}>Hi, I’m Tyce — an engineering leader focused on building incredibly performant and motivated teams with high levels of trust and creativity.</h1>
+            <h1 className={styles.intro}>Hi, I’m Tyce — an engineering leader focused on building exceptionally performant and motivated teams with high levels of trust and creativity.</h1>
             <Hero
               imageSrc={mainHeroImage}
               imageAlt="Black and white photo of engineering manager Tyce Clee smiling"
@@ -74,14 +74,17 @@ export default function MyApp() {
               imageSrc={secondaryHeroImage}
               imageAlt="Black and white photo of engineering manager Tyce Clee as a young boy"
               imageDetails="Yeppoon, Australia — circa 1993"
-              headline="Today I’m with Spotify based in Melbourne, Australia leading an engineering team building podcast and advertising tools"
+              headline="Today I’m with Spotify based in Melbourne, Australia leading an engineering team building design systems and advertising tooling"
               byline="Listen to some podcasts I’ve featured on and playlists I co-curate."
             />
 
             <div className={styles.twoup} id="podcasts">
               <div className={styles.twoup__column}><h3 className={styles.twoup__title}>Podcasts</h3></div>
               <div className={styles.twoup__column}>
-                <Iframe src="https://open.spotify.com/embed/episode/3NkdXAdx5ZUXL0vAqImtey?utm_source=generator&theme=0&t=0" width="100%" height="352" frameBorder="0" allow="clipboard-write; encrypted-media; picture-in-picture" loading="lazy" />
+                <Iframe src="https://open.spotify.com/embed/episode/49cqwCPFyFRTuLdBaY5V7h?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" />
+                <p className={styles.twoup__content_muted}>Smith Schwartz, Product Design Manager, and Tyce Clee, Engineering Manager, walk us through the redesign of Spotify Ads Manager—why it was needed, how they used design systems to make it happen, and what it took to get buy-in.</p>
+
+                <Iframe src="https://open.spotify.com/embed/episode/3NkdXAdx5ZUXL0vAqImtey?utm_source=generator&theme=0&t=0" width="100%" height="152" frameBorder="0" allow="clipboard-write; encrypted-media; picture-in-picture" loading="lazy" />
                 <p className={styles.twoup__content_muted}>Smith Schwartz, Product Design Manager &amp; Tyce Clee, Engineering Manager at Spotify discuss their design system, Encore</p>
 
                 <Iframe src="https://open.spotify.com/embed/episode/55SbkMbwh1v1jNJTJXnhfH?utm_source=generator&theme=0&t=0" width="100%" height="152" frameBorder="0" allow="clipboard-write; encrypted-media; picture-in-picture" loading="lazy" />
