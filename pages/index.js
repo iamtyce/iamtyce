@@ -74,7 +74,7 @@ export default function MyApp() {
               imageSrc={secondaryHeroImage}
               imageAlt="Black and white photo of engineering manager Tyce Clee as a young boy"
               imageDetails="Yeppoon, Australia — circa 1993"
-              headline="Today I’m with Spotify based in Melbourne, Australia leading an engineering team building design systems and advertising tooling"
+              headline="Today I’m with Spotify based in Australia leading an engineering team building design systems and critical internal tooling to support Spotify Ads Manager."
               byline="Listen to some podcasts I’ve featured on and playlists I co-curate."
             />
 
