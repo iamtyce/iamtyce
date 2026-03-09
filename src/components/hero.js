@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import styles from '../../styles/styles.module.scss'
+import styles from '../styles/styles.module.scss'
 
 export default function Hero({ imageSrc, imageAlt, imageDetails, headline, byline, subline, ...props }) {
   return (

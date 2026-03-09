@@ -5,12 +5,12 @@ import Head from "next/head";
 import Iframe from 'react-iframe'
 import '../styles/global.css'
 import styles from '../styles/styles.module.scss'
-import Navbar from '../src/components/navbar'
-import Hero from '../src/components/hero'
-import mainHeroImage from '../src/images/tyce-2023.png';
-import secondaryHeroImage from '../src/images/tyce-1993.png';
-import IconLinkedIn from '../src/images/LinkedIn.png';
-import IconEmail from '../src/images/Email.png';
+import Navbar from '../components/navbar'
+import Hero from '../components/hero'
+import mainHeroImage from '../images/tyce-2023.png';
+import secondaryHeroImage from '../images/tyce-1993.png';
+import IconLinkedIn from '../images/LinkedIn.png';
+import IconEmail from '../images/Email.png';
 
 const domine = Domine({ subsets: ['latin'] })
 
