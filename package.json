@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "gray-matter": "^4.0.3",
-    "next": "16.1.5",
+    "next": "16.2.6",
     "react": "^18",
     "react-dom": "^18",
     "react-iframe": "^1.8.5",
@@ -22,8 +22,8 @@
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
-    "eslint": "^8",
-    "eslint-config-next": "14.0.4",
+    "eslint": "^9",
+    "eslint-config-next": "16.2.6",
     "sass": "^1.69.5",
     "typescript": "^5"
   },
@@ -31,7 +31,8 @@
     "overrides": {
       "braces": "^3.0.3",
       "immutable": "^4.3.8",
-      "minimatch": "^9.0.7"
+      "minimatch": "^9.0.7",
+      "postcss": "^8.5.10"
     },
     "onlyBuiltDependencies": ["@parcel/watcher", "sharp", "unrs-resolver"]
   },
