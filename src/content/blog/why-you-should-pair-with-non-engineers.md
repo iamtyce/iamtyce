@@ -5,9 +5,11 @@ description: Spotify encourages engineers to become T-shaped and lean into techn
 heroImage: https://engineering.atspotify.com/_next/image?url=https%3A%2F%2Fimages.ctfassets.net%2Fp762jor363g1%2F1c37283d4b52bce3f1354c4a4a8dbad0%2Fed2db1b2eb32c80c3594bde4f355e25d%2FEN139_1200_x_630.png&w=1920&q=75
 ---
 
-**TL;DR** Spotify encourages engineers to become T-shaped and lean into technologies and skill sets outside of their core specialization. Being a T-shaped developer doesn't always mean having to learn more code, additional languages, or frameworks. It can be about broadening your outlook on the product-creation process and learning from peers outside of your discipline. Design Systems Engineering Manager at Spotify Tyce Clee talks about his experiences and the benefits of pairing with teams outside your strict discipline.
+**TL;DR** Spotify encourages engineers to become T-shaped and lean into technologies and skill sets outside of their core specialization. Being a T-shaped developer doesn't always mean having to learn more code, additional languages, or frameworks. It can be about broadening your outlook on the product-creation process and learning from peers outside of your discipline.
 
-Prior to becoming an engineering manager, I spent the majority of my career as an engineer, primarily working on web interfaces and applications. The experiences and relationships built during my time as an engineer were essential to a successful transition into management. I've had firsthand experience with pairing with many other disciplines to achieve a goal or take a feature to production, and I want to share some of those learnings with you.
+> Prior to becoming an engineering manager, I spent the majority of my career as an engineer, primarily working on web interfaces and applications.
+
+The experiences and relationships built during my time as an engineer were essential to a successful transition into management. I've had firsthand experience with pairing with many other disciplines to achieve a goal or take a feature to production, and I want to share some of those learnings with you.
 
 ## Broaden scope of knowledge (T shape)
 
@@ -17,7 +19,9 @@ Within web engineering, we can look to our other developer colleagues and learn 
 
 Additionally, when pairing with those outside of our discipline, we get to expand our thinking more laterally beyond just code, understanding more of the why and how behind a product-creation process and not just the final piece of the puzzle.
 
-When I paired with a UX prototyper, I was able to gain early insights into product inception. This allowed me to get face time with real users through user-testing sessions, to have conversations with product managers on the importance of the new feature or product, and even to pair with designers on early mockups of the UI itself. Then, when the time came to write code, I had a much more well-rounded and cohesive background on the product we were building, and could be more invested in why it's important for the business.
+> When I paired with a UX prototyper, I was able to gain early insights into product inception.
+
+This allowed me to get face time with real users through user-testing sessions, to have conversations with product managers on the importance of the new feature or product, and even to pair with designers on early mockups of the UI itself. Then, when the time came to write code, I had a much more well-rounded and cohesive background on the product we were building, and could be more invested in why it's important for the business.
 
 ## Stress-test documentation
 
@@ -33,7 +37,7 @@ Understanding the work that your colleagues do is a key piece to building better
 
 The next step would be to return the favor and encourage your non-engineer teammates to spend time with you. Dedicate the day to it, and treat it like an open conversation with some learning goals to achieve by the end of the day. Building this level of empathy between disciplines can only help with future planning, prioritization of work, and overall understanding of the difficulties faced by all the disciplines required to build digital products.
 
-I once spent half a day pairing with a designer to brainstorm ways to better capture key descriptions of each component in our design system, and together we came up with a way to store that data to then use as code hints in an IDE and also display in Figma.
+> I once spent half a day pairing with a designer to brainstorm ways to better capture key descriptions of each component in our design system, and together we came up with a way to store that data to then use as code hints in an IDE and also display in Figma.
 
 You might be thinking "I don't have time for this," or "I can't justify prioritizing this over other things in my sprint," but I would argue that spending a "day in the life" with someone else will forever affect the way you interact with that person, discipline, or product. Diversity of thought and background is key to building the best products imaginable, and by sharing your day with someone else you will exponentially increase your ability to build better products that will ultimately impact a broader group of people due to that expanded way of thinking.
 

@@ -5,7 +5,11 @@ description: Three years after introducing Encore, we reflect on what we've lear
 heroImage: /images/blog/can-i-get-an-encore/Encore_hero.webp
 ---
 
-"For an audio company, you're awfully quiet..." We last spoke publicly about what Spotify is doing in the design system space in 2019 when we introduced a new system called Encore. Since then it's been radio silence. We haven't really said much or talked publicly despite being asked about it. We've had our heads down learning, thinking, and shipping. So, maybe you're curious. What have we been up to? How has Encore grown and evolved in the last few years? And what have we learned?
+_This article was originally co-written with Shaun Bent, Engineering Manager and published on the Spotify Design blog in December 2022. It has been republished here for preservation and you should go read more from Shaun on [his personal blog](https://www.shaunbent.co.uk/)._
+
+> For an audio company, you're awfully quiet...
+
+We last spoke publicly about what Spotify is doing in the design system space in 2019 when we introduced a new system called Encore. Since then it's been radio silence. We haven't really said much or talked publicly despite being asked about it. We've had our heads down learning, thinking, and shipping. So, maybe you're curious. What have we been up to? How has Encore grown and evolved in the last few years? And what have we learned?
 
 ## A quick recap
 
@@ -27,7 +31,9 @@ It represented the consolidation of existing initiatives — some official and m
 
 Encore was designed for Spotify's diverse set of use cases, across many platforms and experiences.
 
-So we introduced what we called "a family of systems" or what's known in the design systems space as a "system of systems", rather than one single monolithic design system.
+> So we introduced what we called "a family of systems" or what's known in the design systems space as a "system of systems", rather than one single monolithic design system.
+
+![The Encore model as it was at launch in late-2019](/images/blog/can-i-get-an-encore/encore-model-2019.webp)
 
 *The Encore model as it was at launch in late-2019*
 
@@ -91,7 +97,9 @@ On web, we took a more traditional approach, creating a library of reusable comp
 
 As the mobile system has evolved, we've seen a growing sentiment amongst the designers and engineers working on our native platforms that they want, need, and expect more pre-built components that can be simply configured, composed, and consumed in a similar fashion to what we've seen be successful for our web system.
 
-It's clear that we swung a little too far in the direction of flexibility and we're now balancing the scales by enabling more reusability on our native platforms. At the beginning of the year, we created a dedicated team to build a reusable set of components for mobile, with the goal of achieving a level of parity with what we currently offer on web.
+> It's clear that we swung a little too far in the direction of flexibility and we're now balancing the scales by enabling more reusability on our native platforms.
+
+At the beginning of the year, we created a dedicated team to build a reusable set of components for mobile, with the goal of achieving a level of parity with what we currently offer on web.
 
 ## Lesson #4 – Non-semantic design tokens offer limited value
 
@@ -135,7 +143,9 @@ So we leaned heavily into the Spotify embed program where an individual contribu
 
 The Encore embed program has now become a famous addition to our overall evangelization strategy. In 2022, we've had someone embedded on an Encore team every single day of the year.
 
-The primary reason for hosting embeds is to build a stronger community of ownership around the system. As an added benefit, we get to improve our onboarding processes, strengthen our documentation, and help our teammates meet new colleagues in a remote climate.
+> The primary reason for hosting embeds is to build a stronger community of ownership around the system.
+
+As an added benefit, we get to improve our onboarding processes, strengthen our documentation, and help our teammates meet new colleagues in a remote climate.
 
 We've had people join our teams from all over the world, not only bringing their diverse experiences and backgrounds but also helping us learn about what they do in their corner of Spotify.
 

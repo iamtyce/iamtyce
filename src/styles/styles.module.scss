@@ -1,55 +1,21 @@
-$primary-color: #fff;
-$secondary-color: #a4a4a4;
-$background-color: #000;
+@use 'tokens' as *;
+
 $max-column-width: 70%;
-$global-padding: 24px;
-
-// Mixins
-
-$screen-sm-min: 576px;
-$screen-md-min: 768px;
-$screen-lg-min: 992px;
-$screen-xl-min: 1200px;
-
-@mixin max-sm {
-  @media (max-width: #{$screen-sm-min - 1}) {
-      @content;
-  }
-}
-@mixin sm {
-  @media (min-width: #{$screen-sm-min}) {
-      @content;
-  }
-}
-@mixin md {
-  @media (min-width: #{$screen-md-min}) {
-      @content;
-  }
-}
-@mixin lg {
-  @media (min-width: #{$screen-lg-min}) {
-      @content;
-  }
-}
-@mixin xl {
-  @media (min-width: #{$screen-xl-min}) {
-      @content;
-  }
-}
 
 // Navigation
+
 .nav {
   margin-left: auto;
   margin-right: auto;
   padding: $global-padding;
   position: sticky;
   top: 0;
-  background-color: $background-color;
+  background-color: $color-background;
 
   @include sm {
     display: flex;
     justify-content: space-between;
-    max-width: 1200px;
+    max-width: $screen-xl-min;
   }
 }
 
@@ -63,46 +29,43 @@ $screen-xl-min: 1200px;
   display: flex;
   margin-top: 0;
   margin-bottom: 0;
-  margin-left: -8px;
+  margin-left: -$space-1;
   padding-left: 0;
   list-style-type: none;
   align-items: center;
 
   @include max-sm {
-    font-size: 14px;
+    font-size: $font-xs;
   }
 
   @include sm {
-    margin-right: -8px;
+    margin-right: -$space-1;
   }
 
   &__link {
-    padding: 4px 8px;
+    padding: $space-0 $space-1;
   }
 
   &__icon {
     @include max-sm {
       position: relative;
       top: 7px;
-      margin-left: 8px;
+      margin-left: $space-1;
     }
-   
+
     @include sm {
       display: flex;
       justify-content: center;
-      padding-left: 8px;
-      padding-right: 8px;
+      padding-left: $space-1;
+      padding-right: $space-1;
     }
   }
 }
 
 // Layout Container
+
 .container {
-  max-width: 900px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: $global-padding;
-  padding-right: $global-padding;
+  @include base-container;
 }
 
 // Intro Header
@@ -111,15 +74,15 @@ $screen-xl-min: 1200px;
   font-weight: 400;
 
   @include max-sm {
-    padding-top: 24px;
-    font-size: 30px;
+    padding-top: $space-4;
+    font-size: $font-3xl;
     line-height: 42px;
   }
 
   @include sm {
     padding-top: 150px;
     padding-bottom: 100px;
-    font-size: 42px;
+    font-size: $font-5xl;
     line-height: 60px;
   }
 }
@@ -149,17 +112,17 @@ $screen-xl-min: 1200px;
 }
 
 .hero__media__details {
-  color: $secondary-color;
+  color: $color-secondary;
 }
 
 .hero__headline {
   @include max-sm {
-    font-size: 30px;
+    font-size: $font-3xl;
     line-height: 40px;
   }
 
   @include sm {
-    font-size: 36px;
+    font-size: $font-4xl;
     line-height: 50px;
   }
 }
@@ -167,12 +130,12 @@ $screen-xl-min: 1200px;
 .hero__byline,
 .hero__subline {
   @include max-sm {
-    font-size: 20px;
+    font-size: $font-lg;
     line-height: 32px;
   }
 
   @include sm {
-    font-size: 26px;
+    font-size: $font-2xl;
     line-height: 40px;
   }
 }
@@ -181,11 +144,11 @@ $screen-xl-min: 1200px;
 
 .twoup {
   @include max-sm {
-    font-size: 20px;
+    font-size: $font-lg;
     line-height: 32px;
     padding-bottom: 100px;
   }
-  
+
   @include sm {
     display: grid;
     grid-template-columns: 40% 60%;
@@ -195,55 +158,55 @@ $screen-xl-min: 1200px;
 
 .twoup__content {
   &:not(:last-child) {
-    padding-bottom: 32px;
+    padding-bottom: $space-5;
   }
 }
 
 .twoup__content_muted {
-  color: $secondary-color;
-  font-size: 14px;
+  color: $color-secondary;
+  font-size: $font-xs;
   line-height: 20px;
   margin-top: 0;
 
   &:not(:last-child) {
-    padding-bottom: 32px;
+    padding-bottom: $space-5;
   }
 }
 
 .twoup__title {
-  font-size: 20px;
+  font-size: $font-lg;
   margin-top: 0;
 
   &::after {
     content: "";
     display: block;
-    width: 40px;
+    width: $space-6;
     height: 1px;
-    background-color: $primary-color;
+    background-color: $color-primary;
   }
 }
 
 .twoup__external_link {
-  font-size: 30px;
+  font-size: $font-3xl;
 }
 
 // Footer
 
 .footer {
   @include max-sm {
-    padding-bottom: 48px;
+    padding-bottom: $space-7;
   }
 
   @include sm {
-    padding-top: 32px;
+    padding-top: $space-5;
     padding-bottom: 100px;
   }
 }
 
 .footer__title {
-  font-size: 36px;
+  font-size: $font-4xl;
   line-height: 50px;
-  
+
   @include sm {
     max-width: $max-column-width;
   }
@@ -258,11 +221,11 @@ $screen-xl-min: 1200px;
 
   &__item {
     &:not(:first-child) {
-      margin-left: 16px;
+      margin-left: $space-3;
     }
   }
 
   &__link {
-    color: $secondary-color;
+    color: $color-secondary;
   }
 }

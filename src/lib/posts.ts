@@ -2,7 +2,76 @@ import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
 import { remark } from 'remark'
-import remarkHtml from 'remark-html'
+import remarkRehype from 'remark-rehype'
+import rehypeExternalLinks from 'rehype-external-links'
+import rehypeRaw from 'rehype-raw'
+import rehypeStringify from 'rehype-stringify'
+import type { Root, Element, Node } from 'hast'
+
+// Rewrites <p><img></p><p><em>caption</em></p> → <figure><img><figcaption>caption</figcaption></figure>
+function rehypeFigureCaption() {
+  return (tree: Root) => {
+    const isImgParagraph = (node: Node): Element | null => {
+      if (node.type !== 'element' || (node as Element).tagName !== 'p') return null
+      const real = (node as Element).children.filter(
+        (c) => c.type !== 'text' || (c as any).value.trim()
+      )
+      if (real.length === 1 && real[0].type === 'element' && (real[0] as Element).tagName === 'img') {
+        return real[0] as Element
+      }
+      return null
+    }
+
+    const isCaptionParagraph = (node: Node): boolean => {
+      if (!node || node.type !== 'element' || (node as Element).tagName !== 'p') return false
+      const real = (node as Element).children.filter(
+        (c) => c.type !== 'text' || (c as any).value.trim()
+      )
+      return real.length === 1 && real[0].type === 'element' && (real[0] as Element).tagName === 'em'
+    }
+
+    const isWhitespace = (node: Node) =>
+      node.type === 'text' && !(node as any).value.trim()
+
+    const process = (children: Node[]): Node[] => {
+      const result: Node[] = []
+      let i = 0
+      while (i < children.length) {
+        const img = isImgParagraph(children[i])
+        // Skip over any whitespace-only text nodes to find the next real sibling
+        let j = i + 1
+        while (j < children.length && isWhitespace(children[j])) j++
+        const nextReal = children[j]
+
+        if (img && nextReal && isCaptionParagraph(nextReal)) {
+          const captionEl = (nextReal as Element).children.find(
+            (c) => c.type === 'element' && (c as Element).tagName === 'em'
+          ) as Element
+          result.push({
+            type: 'element',
+            tagName: 'figure',
+            properties: {},
+            children: [
+              img,
+              { type: 'element', tagName: 'figcaption', properties: {}, children: captionEl.children },
+            ],
+          } as Element)
+          i = j + 1
+        } else {
+          const node = children[i]
+          if (node.type === 'element') {
+            (node as Element).children = process((node as Element).children)
+          }
+          result.push(node)
+          i++
+        }
+      }
+      return result
+    }
+
+    tree.children = process(tree.children) as any
+  }
+}
 
 const postsDir = path.join(process.cwd(), 'src/content/blog')
 
@@ -48,7 +117,13 @@ export async function getPostBySlug(slug: string): Promise<Post | null> {
   if (!fs.existsSync(filePath)) return null
 
   const { data, content } = matter(fs.readFileSync(filePath, 'utf8'))
-  const processed = await remark().use(remarkHtml).process(content)
+  const processed = await remark()
+    .use(remarkRehype, { allowDangerousHtml: true })
+    .use(rehypeRaw)
+    .use(rehypeFigureCaption)
+    .use(rehypeExternalLinks, { target: '_blank', rel: ['noopener', 'noreferrer'] })
+    .use(rehypeStringify)
+    .process(content)
 
   return {
     slug,
