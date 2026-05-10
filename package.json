@@ -3,16 +3,19 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev -p 1337",
     "build": "next build",
     "start": "npx serve@latest out",
     "lint": "next lint"
   },
   "dependencies": {
+    "gray-matter": "^4.0.3",
     "next": "16.1.5",
     "react": "^18",
     "react-dom": "^18",
     "react-iframe": "^1.8.5",
+    "remark": "^15.0.1",
+    "remark-html": "^16.0.1",
     "sharp": "^0.33.0"
   },
   "devDependencies": {
@@ -24,9 +27,13 @@
     "sass": "^1.69.5",
     "typescript": "^5"
   },
-  "overrides": {
-    "braces": "^3.0.3",
-    "immutable": "^4.3.8",
-    "minimatch": "^9.0.7"
-  }
+  "pnpm": {
+    "overrides": {
+      "braces": "^3.0.3",
+      "immutable": "^4.3.8",
+      "minimatch": "^9.0.7"
+    },
+    "onlyBuiltDependencies": ["@parcel/watcher", "sharp", "unrs-resolver"]
+  },
+  "packageManager": "pnpm@10.32.1"
 }

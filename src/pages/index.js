@@ -64,9 +64,9 @@ export default function MyApp() {
             <div className={styles.twoup} id="articles">
               <div className={styles.twoup__column}><h3 className={styles.twoup__title}>Articles</h3></div>
               <div className={styles.twoup__column}>
-                <p className={styles.twoup__content}><a href="https://spotify.design/article/5-things-i-wish-id-known-before-starting-a-design-system-at-spotify " target="_blank" className={styles.twoup__external_link}>5 Things I Wish I’d Known Before Starting a Design System at Spotify</a></p>
-                <p className={styles.twoup__content}><a href="https://engineering.atspotify.com/2021/03/why-you-should-pair-with-non-engineers/ " target="_blank" className={styles.twoup__external_link}>Why You Should Pair with Non-Engineers</a></p>
-                <p className={styles.twoup__content}><a href="https://spotify.design/article/can-i-get-an-encore-spotifys-design-system-three-years-on " target="_blank" className={styles.twoup__external_link}>Can I get an Encore? Spotify’s Design System, Three Years On</a></p>
+                <p className={styles.twoup__content}><Link href="/blog/5-things-i-wish-id-known-before-starting-a-design-system-at-spotify" className={styles.twoup__external_link}>5 Things I Wish I’d Known Before Starting a Design System at Spotify</Link></p>
+                <p className={styles.twoup__content}><Link href="/blog/why-you-should-pair-with-non-engineers" className={styles.twoup__external_link}>Why You Should Pair with Non-Engineers</Link></p>
+                <p className={styles.twoup__content}><Link href="/blog/can-i-get-an-encore-spotifys-design-system-three-years-on" className={styles.twoup__external_link}>Can I get an Encore? Spotify’s Design System, Three Years On</Link></p>
               </div>
             </div>
 
