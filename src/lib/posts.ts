@@ -102,7 +102,7 @@ export function getAllPosts(): PostMeta[] {
         heroImage: data.heroImage as string,
       }
     })
-    .sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime())
+    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
 }
 
 export function getNextPost(slug: string): PostMeta | null {
