@@ -124,12 +124,19 @@
 
   blockquote {
     position: relative;
-    margin: $space-5 0 $space-5 128px;
     padding: $space-4 0;
     color: $color-secondary;
     font-size: $font-2xl;
     font-style: italic;
     line-height: 1.6;
+
+    @include max-sm {
+      margin: $space-5 0 $space-5 40px;
+    }
+
+    @include sm {
+      margin: $space-5 0 $space-5 128px;
+    }
 
     p {
       font-size: inherit;
@@ -139,12 +146,19 @@
     &::before {
       content: '\201C';
       position: absolute;
-      left: -52px;
       top: $space-2;
       font-size: $font-hero;
       line-height: 1;
       color: $color-quote-mark;
       font-style: normal;
+
+      @include max-sm {
+        left: -28px;
+      }
+
+      @include sm {
+        left: -52px;
+      }
     }
   }
 
