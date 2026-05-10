@@ -60,7 +60,7 @@ function rehypeFigureCaption() {
         } else {
           const node = children[i]
           if (node.type === 'element') {
-            (node as Element).children = process((node as Element).children)
+            (node as Element).children = process((node as Element).children as unknown as Node[]) as any
           }
           result.push(node)
           i++

@@ -48,6 +48,9 @@ importers:
         specifier: ^0.33.0
         version: 0.33.5
     devDependencies:
+      '@types/hast':
+        specifier: ^3.0.4
+        version: 3.0.4
       '@types/node':
         specifier: ^20
         version: 20.19.40
