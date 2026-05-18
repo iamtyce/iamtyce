@@ -35,6 +35,9 @@ export default function MyApp({ posts }) {
               <Link href="#articles" className={styles.nav__list__link}>Articles</Link>
             </li>
             <li className={styles.nav__list__item}>
+              <Link href="#apps" className={styles.nav__list__link}>Apps</Link>
+            </li>
+            <li className={styles.nav__list__item}>
               <Link href="#podcasts" className={styles.nav__list__link}>Podcasts</Link>
             </li>
             <li className={styles.nav__list__item}>
@@ -83,8 +86,21 @@ export default function MyApp({ posts }) {
               imageAlt="Black and white photo of engineering manager Tyce Clee as a young boy"
               imageDetails="Yeppoon, Australia — circa 1993"
               headline="Today I’m with Spotify based in Australia leading an engineering team building design systems and critical internal tooling to support Spotify Ads Manager."
-              byline="Listen to some podcasts I’ve featured on and playlists I co-curate."
             />
+
+            <div className={styles.twoup} id="apps">
+              <div className={styles.twoup__column}><h3 className={styles.twoup__title}>Apps</h3></div>
+              <div className={styles.twoup__column}>
+                <div className={styles.twoup__app_card}>
+                  <Link href="https://redlinehq.dev" target="_blank"><Image src="/images/redline.svg" width={460} height={200} alt="Redline" className={styles.twoup__app_card__image} /></Link>
+                  <p className={styles.twoup__app__description}>A performance review generator for engineers and engineering managers with guided questions that produce polished, first-person self-review drafts.</p>
+                </div>
+                <div className={styles.twoup__app_card}>
+                  <Link href="https://www.shoutmate.app" target="_blank"><Image src="/images/shoutmate.svg" width={460} height={200} alt="ShoutMate" className={styles.twoup__app_card__image} /></Link>
+                  <p className={styles.twoup__app__description}>A browser-based expense splitter for group trips. Track shared costs and settle debts with no account required — all data stays on your device.</p>
+                </div>
+              </div>
+            </div>
 
             <div className={styles.twoup} id="podcasts">
               <div className={styles.twoup__column}><h3 className={styles.twoup__title}>Podcasts</h3></div>

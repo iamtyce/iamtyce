@@ -1,0 +1,67 @@
+<svg width="460" height="200" viewBox="0 0 460 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="circleShadow" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="2" stdDeviation="5" flood-color="#0c3050" flood-opacity="0.09"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="460" height="200" fill="#eaeff6"/>
+
+  <!-- Header: tent emoji + ShoutMate -->
+  <text
+    x="230" y="30"
+    text-anchor="middle"
+    font-family="'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+    font-size="17"
+    font-weight="700"
+    fill="#0c1d2e"
+  >🏕️  ShoutMate</text>
+
+  <!-- Emoji circles — staggered arc -->
+  <circle cx="112" cy="72" r="22" fill="white" filter="url(#circleShadow)"/>
+  <text x="112" y="81" text-anchor="middle" font-size="21">⛰️</text>
+
+  <circle cx="183" cy="80" r="20" fill="white" filter="url(#circleShadow)"/>
+  <text x="183" y="88" text-anchor="middle" font-size="19">🏖️</text>
+
+  <circle cx="258" cy="69" r="26" fill="white" filter="url(#circleShadow)"/>
+  <text x="258" y="79" text-anchor="middle" font-size="24">🗺️</text>
+
+  <circle cx="332" cy="77" r="20" fill="white" filter="url(#circleShadow)"/>
+  <text x="332" y="86" text-anchor="middle" font-size="19">⛳</text>
+
+  <circle cx="400" cy="72" r="22" fill="white" filter="url(#circleShadow)"/>
+  <text x="400" y="81" text-anchor="middle" font-size="21">🧳</text>
+
+  <!-- Coral pill divider -->
+  <rect x="207" y="108" width="46" height="5" rx="2.5" fill="#ff6435"/>
+
+  <!-- Headline -->
+  <text
+    x="230" y="134"
+    text-anchor="middle"
+    font-family="'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+    font-size="21"
+    font-weight="800"
+    fill="#0c1d2e"
+  >Trips sorted.</text>
+
+  <text
+    x="230" y="159"
+    text-anchor="middle"
+    font-family="'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+    font-size="21"
+    font-weight="800"
+    fill="#0c1d2e"
+  >Mates still mates.</text>
+
+  <!-- Subtext -->
+  <text
+    x="230" y="181"
+    text-anchor="middle"
+    font-family="'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+    font-size="11"
+    fill="#4a6274"
+  >No accounts. No awkward money chats. Just a fair shout.</text>
+</svg>

@@ -17,8 +17,8 @@ export default function Hero({ imageSrc, imageAlt, imageDetails, headline, bylin
         <small className={styles.hero__media__details}>{imageDetails}</small>
       </div>
       <h2 className={styles.hero__headline}>{headline}</h2>
-      <p className={styles.hero__byline}>{byline}</p>
-      <p className={styles.hero__subline}>{subline}</p>
+      {byline && <p className={styles.hero__byline}>{byline}</p>}
+      {subline && <p className={styles.hero__subline}>{subline}</p>}
     </article>
   )
 }

@@ -15,6 +15,9 @@ export default function SiteNav() {
           <Link href="/#articles" className={styles.nav__list__link}>Articles</Link>
         </li>
         <li className={styles.nav__list__item}>
+          <Link href="/#apps" className={styles.nav__list__link}>Apps</Link>
+        </li>
+        <li className={styles.nav__list__item}>
           <Link href="/#podcasts" className={styles.nav__list__link}>Podcasts</Link>
         </li>
         <li className={styles.nav__list__item}>

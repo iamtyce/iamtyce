@@ -10,6 +10,7 @@ $max-column-width: 70%;
   padding: $global-padding;
   position: sticky;
   top: 0;
+  z-index: 10;
   background-color: $color-background;
 
   @include sm {
@@ -188,6 +189,62 @@ $max-column-width: 70%;
 
 .twoup__external_link {
   font-size: $font-3xl;
+}
+
+.twoup__app {
+  display: flex;
+  align-items: flex-start;
+  gap: $space-3;
+
+  &:not(:last-child) {
+    padding-bottom: $space-5;
+  }
+}
+
+.twoup__app_card {
+  &:not(:last-child) {
+    padding-bottom: $space-5;
+  }
+}
+
+.twoup__app_card__image {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: $radius-md;
+  margin-bottom: $space-2;
+  filter: grayscale(100%);
+  transition: filter 0.4s ease;
+
+  &:hover {
+    filter: grayscale(0%);
+  }
+}
+
+.twoup__app__image {
+  flex-shrink: 0;
+  border-radius: $radius-lg;
+  overflow: hidden;
+}
+
+.twoup__app__name {
+  display: block;
+  font-size: $font-3xl;
+  margin-bottom: $space-0;
+}
+
+.twoup__app__url {
+  display: block;
+  font-size: $font-xs;
+  color: $color-secondary;
+  margin-bottom: $space-1;
+}
+
+.twoup__app__description {
+  color: $color-secondary;
+  font-size: $font-xs;
+  line-height: 20px;
+  margin: 0;
 }
 
 // Footer
